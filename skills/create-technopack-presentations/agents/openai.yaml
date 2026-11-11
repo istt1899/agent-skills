@@ -1,0 +1,4 @@
+interface:
+  display_name: "Technopack Presentations"
+  short_description: "Документальная история — стандарт моих презентаций"
+  default_prompt: "Use $create-technopack-presentations to present my materials in my approved Documentary Story format, with a clear backstory, a dark green cover with the main answer, readable light chapters, restrained motion, source dossier, and verified Telegram delivery."

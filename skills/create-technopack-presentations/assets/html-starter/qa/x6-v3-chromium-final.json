@@ -1,0 +1,214 @@
+{
+  "html": "C:\\Users\\user\\Documents\\Concave lab\\recommendation-research\\x6-swipe-close-v3\\BMW-X6-Swipe-v3.html",
+  "sha256": "398d402cb433848f5d6dd03302fd4c6f802dca6b43cf58eae29636bcca0d339f",
+  "engine": "chromium",
+  "physicalDevice": false,
+  "telegramPreview": false,
+  "verifierSha256": "1dc805ebb08ac6876738797c379cb43519391869f68035f79f37c7291181b770",
+  "transport": "offline file URL",
+  "browserErrors": [],
+  "checks": [
+    {
+      "mode": "touch",
+      "viewport": {
+        "width": 320,
+        "height": 720
+      },
+      "index": 0,
+      "inlineDoubleTap": true,
+      "viewerDoubleTap": true,
+      "singleTapStable": true,
+      "closeReturn": true,
+      "nativeWidth": true
+    },
+    {
+      "mode": "touch",
+      "viewport": {
+        "width": 320,
+        "height": 720
+      },
+      "index": 18,
+      "inlineDoubleTap": true,
+      "viewerDoubleTap": true,
+      "singleTapStable": true,
+      "closeReturn": true,
+      "nativeWidth": true
+    },
+    {
+      "mode": "touch",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "index": 0,
+      "inlineDoubleTap": true,
+      "viewerDoubleTap": true,
+      "singleTapStable": true,
+      "closeReturn": true,
+      "nativeWidth": true
+    },
+    {
+      "mode": "touch",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "index": 18,
+      "inlineDoubleTap": true,
+      "viewerDoubleTap": true,
+      "singleTapStable": true,
+      "closeReturn": true,
+      "nativeWidth": true
+    },
+    {
+      "mode": "touch",
+      "viewport": {
+        "width": 812,
+        "height": 375
+      },
+      "index": 0,
+      "inlineDoubleTap": true,
+      "viewerDoubleTap": true,
+      "singleTapStable": true,
+      "closeReturn": true,
+      "nativeWidth": true
+    },
+    {
+      "mode": "touch",
+      "viewport": {
+        "width": 812,
+        "height": 375
+      },
+      "index": 18,
+      "inlineDoubleTap": true,
+      "viewerDoubleTap": true,
+      "singleTapStable": true,
+      "closeReturn": true,
+      "nativeWidth": true
+    },
+    {
+      "mode": "mouse-keyboard",
+      "clickZoom": true,
+      "keyboardZoom": true,
+      "focusTrap": true,
+      "escapeReturn": true
+    },
+    {
+      "mode": "no-javascript",
+      "offline": true,
+      "otherRequestsBlocked": true,
+      "open": true,
+      "imageDoesNotClose": true,
+      "exactReturnAnchor": true
+    },
+    {
+      "mode": "drag-dismiss",
+      "viewport": {
+        "width": 320,
+        "height": 720
+      },
+      "reducedMotion": "no-preference",
+      "input": "browser touch stream (CDP)",
+      "trustedInput": {
+        "moves": 52,
+        "untrusted": 0
+      },
+      "followsFinger": true,
+      "shortSnapBack": true,
+      "horizontalNoDismiss": true,
+      "pointerCancel": true,
+      "reverseAfterThreshold": true,
+      "multiTouch": true,
+      "doubleTapAfterCancel": true,
+      "enlargedPanNoDismiss": true,
+      "enlargedNativePan": "verified when vertical overflow exists",
+      "interruptedSnapBack": false,
+      "longDragReturn": true,
+      "longPressDragReturn": true,
+      "flickReturn": true,
+      "pageZoom": "native page scale 1.5; no dismissal"
+    },
+    {
+      "mode": "drag-dismiss",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "reducedMotion": "no-preference",
+      "input": "browser touch stream (CDP)",
+      "trustedInput": {
+        "moves": 61,
+        "untrusted": 0
+      },
+      "followsFinger": true,
+      "shortSnapBack": true,
+      "horizontalNoDismiss": true,
+      "pointerCancel": true,
+      "reverseAfterThreshold": true,
+      "multiTouch": true,
+      "doubleTapAfterCancel": true,
+      "enlargedPanNoDismiss": true,
+      "enlargedNativePan": "verified when vertical overflow exists",
+      "interruptedSnapBack": true,
+      "longDragReturn": true,
+      "longPressDragReturn": true,
+      "flickReturn": true,
+      "pageZoom": "native page scale 1.5; no dismissal"
+    },
+    {
+      "mode": "drag-dismiss",
+      "viewport": {
+        "width": 812,
+        "height": 375
+      },
+      "reducedMotion": "no-preference",
+      "input": "browser touch stream (CDP)",
+      "trustedInput": {
+        "moves": 52,
+        "untrusted": 0
+      },
+      "followsFinger": true,
+      "shortSnapBack": true,
+      "horizontalNoDismiss": true,
+      "pointerCancel": true,
+      "reverseAfterThreshold": true,
+      "multiTouch": true,
+      "doubleTapAfterCancel": true,
+      "enlargedPanNoDismiss": true,
+      "enlargedNativePan": "verified when vertical overflow exists",
+      "interruptedSnapBack": false,
+      "longDragReturn": true,
+      "longPressDragReturn": true,
+      "flickReturn": true,
+      "pageZoom": "native page scale 1.5; no dismissal"
+    },
+    {
+      "mode": "drag-dismiss",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "reducedMotion": "reduce",
+      "input": "browser touch stream (CDP)",
+      "trustedInput": {
+        "moves": 52,
+        "untrusted": 0
+      },
+      "followsFinger": true,
+      "shortSnapBack": true,
+      "horizontalNoDismiss": true,
+      "pointerCancel": true,
+      "reverseAfterThreshold": true,
+      "multiTouch": true,
+      "doubleTapAfterCancel": true,
+      "enlargedPanNoDismiss": true,
+      "enlargedNativePan": "verified when vertical overflow exists",
+      "interruptedSnapBack": false,
+      "longDragReturn": true,
+      "longPressDragReturn": true,
+      "flickReturn": true,
+      "pageZoom": "native page scale 1.5; no dismissal"
+    }
+  ],
+  "passed": true
+}

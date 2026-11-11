@@ -1,0 +1,42 @@
+{
+  "html": "C:\\Users\\user\\Documents\\Concave lab\\recommendation-research\\x6-swipe-close-v3\\BMW-X6-Swipe-v3.html",
+  "sha256": "398d402cb433848f5d6dd03302fd4c6f802dca6b43cf58eae29636bcca0d339f",
+  "engine": "chromium",
+  "physicalDevice": false,
+  "telegramPreview": false,
+  "verifierSha256": "2d47d337e01d027bbf2671bfcd94b03e1cc40a21671a2e2342f4981e7a1d38ad",
+  "transport": "offline file URL",
+  "browserErrors": [],
+  "checks": [
+    {
+      "mode": "drag-dismiss",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "reducedMotion": "no-preference",
+      "input": "browser touch stream (CDP)",
+      "trustedInput": {
+        "moves": 61,
+        "untrusted": 0
+      },
+      "followsFinger": true,
+      "shortSnapBack": true,
+      "horizontalNoDismiss": true,
+      "pointerCancel": true,
+      "reverseAfterThreshold": true,
+      "multiTouch": true,
+      "doubleTapAfterCancel": true,
+      "enlargedPanNoDismiss": true,
+      "enlargedNativePan": "verified when vertical overflow exists",
+      "interruptedSnapBack": true,
+      "longDragReturn": true,
+      "longPressDragReturn": true,
+      "flickReturn": true,
+      "pageZoom": "native page scale 1.5; no dismissal"
+    }
+  ],
+  "selection": "drag-only",
+  "viewportSelection": 390,
+  "passed": true
+}

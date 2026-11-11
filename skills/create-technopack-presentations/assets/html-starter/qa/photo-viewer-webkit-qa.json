@@ -1,0 +1,197 @@
+{
+  "html": "C:\\Users\\user\\.codex\\skills\\create-technopack-presentations\\assets\\html-starter\\index.html",
+  "sha256": "29decc96d813d9212958dcd7bc2dd2c1ddea6ef0419536493f05ce66e814f7e1",
+  "engine": "webkit",
+  "physicalDevice": false,
+  "telegramPreview": false,
+  "verifierSha256": "38d17436bf5cbce5663317b81e2336a595e17da1b38abfac139a58f5ab324279",
+  "transport": "in-memory HTTP route; other requests blocked; file preview unverified",
+  "browserErrors": [],
+  "checks": [
+    {
+      "mode": "touch",
+      "viewport": {
+        "width": 320,
+        "height": 720
+      },
+      "index": 0,
+      "inlineDoubleTap": true,
+      "viewerDoubleTap": true,
+      "singleTapStable": true,
+      "closeReturn": true,
+      "nativeWidth": true
+    },
+    {
+      "mode": "touch",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "index": 0,
+      "inlineDoubleTap": true,
+      "viewerDoubleTap": true,
+      "singleTapStable": true,
+      "closeReturn": true,
+      "nativeWidth": true
+    },
+    {
+      "mode": "touch",
+      "viewport": {
+        "width": 812,
+        "height": 375
+      },
+      "index": 0,
+      "inlineDoubleTap": true,
+      "viewerDoubleTap": true,
+      "singleTapStable": true,
+      "closeReturn": true,
+      "nativeWidth": true
+    },
+    {
+      "mode": "mouse-keyboard",
+      "clickZoom": true,
+      "keyboardZoom": true,
+      "focusTrap": true,
+      "escapeReturn": true
+    },
+    {
+      "mode": "no-javascript",
+      "offline": false,
+      "otherRequestsBlocked": true,
+      "open": true,
+      "imageDoesNotClose": true,
+      "exactReturnAnchor": true
+    },
+    {
+      "mode": "drag-dismiss",
+      "viewport": {
+        "width": 320,
+        "height": 720
+      },
+      "reducedMotion": "no-preference",
+      "input": "trusted browser touch stream (private WebKit Input protocol; QA only)",
+      "trustedInput": {
+        "moves": 53,
+        "untrusted": 0
+      },
+      "followsFinger": true,
+      "shortSnapBack": true,
+      "horizontalNoDismiss": true,
+      "pointerCancel": "verified in isolated final context",
+      "reverseAfterThreshold": true,
+      "multiTouch": "unsupported by WebKit input driver",
+      "doubleTapAfterCancel": "unsupported by WebKit input driver",
+      "doubleTapAfterDrag": true,
+      "enlargedPanNoDismiss": true,
+      "enlargedNativePan": "native compositor panning unverified in Windows WebKit automation",
+      "interruptedSnapBack": false,
+      "longDragReturn": true,
+      "longPressDragReturn": true,
+      "flickReturn": true,
+      "pageZoom": "not available in this WebKit driver"
+    },
+    {
+      "mode": "drag-dismiss",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "reducedMotion": "no-preference",
+      "input": "trusted browser touch stream (private WebKit Input protocol; QA only)",
+      "trustedInput": {
+        "moves": 62,
+        "untrusted": 0
+      },
+      "followsFinger": true,
+      "shortSnapBack": true,
+      "horizontalNoDismiss": true,
+      "pointerCancel": "verified in isolated final context",
+      "reverseAfterThreshold": true,
+      "multiTouch": "unsupported by WebKit input driver",
+      "doubleTapAfterCancel": "unsupported by WebKit input driver",
+      "doubleTapAfterDrag": true,
+      "enlargedPanNoDismiss": true,
+      "enlargedNativePan": "native compositor panning unverified in Windows WebKit automation",
+      "interruptedSnapBack": true,
+      "longDragReturn": true,
+      "longPressDragReturn": true,
+      "flickReturn": true,
+      "pageZoom": "not available in this WebKit driver"
+    },
+    {
+      "mode": "drag-dismiss",
+      "viewport": {
+        "width": 812,
+        "height": 375
+      },
+      "reducedMotion": "no-preference",
+      "input": "trusted browser touch stream (private WebKit Input protocol; QA only)",
+      "trustedInput": {
+        "moves": 53,
+        "untrusted": 0
+      },
+      "followsFinger": true,
+      "shortSnapBack": true,
+      "horizontalNoDismiss": true,
+      "pointerCancel": "verified in isolated final context",
+      "reverseAfterThreshold": true,
+      "multiTouch": "unsupported by WebKit input driver",
+      "doubleTapAfterCancel": "unsupported by WebKit input driver",
+      "doubleTapAfterDrag": true,
+      "enlargedPanNoDismiss": true,
+      "enlargedNativePan": "native compositor panning unverified in Windows WebKit automation",
+      "interruptedSnapBack": false,
+      "longDragReturn": true,
+      "longPressDragReturn": true,
+      "flickReturn": true,
+      "pageZoom": "not available in this WebKit driver"
+    },
+    {
+      "mode": "drag-dismiss",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "reducedMotion": "reduce",
+      "input": "trusted browser touch stream (private WebKit Input protocol; QA only)",
+      "trustedInput": {
+        "moves": 53,
+        "untrusted": 0
+      },
+      "followsFinger": true,
+      "shortSnapBack": true,
+      "horizontalNoDismiss": true,
+      "pointerCancel": "verified in isolated final context",
+      "reverseAfterThreshold": true,
+      "multiTouch": "unsupported by WebKit input driver",
+      "doubleTapAfterCancel": "unsupported by WebKit input driver",
+      "doubleTapAfterDrag": true,
+      "enlargedPanNoDismiss": true,
+      "enlargedNativePan": "native compositor panning unverified in Windows WebKit automation",
+      "interruptedSnapBack": false,
+      "longDragReturn": true,
+      "longPressDragReturn": true,
+      "flickReturn": true,
+      "pageZoom": "not available in this WebKit driver"
+    },
+    {
+      "mode": "isolated-webkit-cancel",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "input": "trusted browser touch stream (private WebKit Input protocol; QA only)",
+      "trustedPointerCancel": true,
+      "staysOpen": true,
+      "snapBack": true,
+      "escapeExactReturn": true,
+      "subsequentClicks": "unverified because private driver suppresses them after touchCancel"
+    }
+  ],
+  "limitations": [
+    "The private Windows WebKit driver cannot add a second contact to an existing stream correctly; native multitouch is verified in Chromium.",
+    "Raw WebKit touchCancel suppresses later synthesized clicks even without application code; cancellation is checked in a separate final context, closed by Escape.",
+    "Native compositor panning and page-scale control are not proven by this WebKit driver; Chromium covers them."
+  ],
+  "passed": true
+}

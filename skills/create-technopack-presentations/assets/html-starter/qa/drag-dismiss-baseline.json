@@ -1,0 +1,67 @@
+{
+  "html": "C:\\Users\\user\\.codex\\skills\\create-technopack-presentations\\assets\\html-starter\\index.html",
+  "sha256": "d1ceda15bc9c4edb15d4d76e5c6c1e6827e7a0d884b496d003d0499ac64d196f",
+  "engine": "chromium",
+  "physicalDevice": false,
+  "telegramPreview": false,
+  "transport": "offline file URL",
+  "browserErrors": [],
+  "checks": [
+    {
+      "mode": "touch",
+      "viewport": {
+        "width": 320,
+        "height": 720
+      },
+      "index": 0,
+      "inlineDoubleTap": true,
+      "viewerDoubleTap": true,
+      "singleTapStable": true,
+      "closeReturn": true,
+      "nativeWidth": true
+    },
+    {
+      "mode": "touch",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "index": 0,
+      "inlineDoubleTap": true,
+      "viewerDoubleTap": true,
+      "singleTapStable": true,
+      "closeReturn": true,
+      "nativeWidth": true
+    },
+    {
+      "mode": "touch",
+      "viewport": {
+        "width": 812,
+        "height": 375
+      },
+      "index": 0,
+      "inlineDoubleTap": true,
+      "viewerDoubleTap": true,
+      "singleTapStable": true,
+      "closeReturn": true,
+      "nativeWidth": true
+    },
+    {
+      "mode": "mouse-keyboard",
+      "clickZoom": true,
+      "keyboardZoom": true,
+      "focusTrap": true,
+      "escapeReturn": true
+    },
+    {
+      "mode": "no-javascript",
+      "offline": true,
+      "otherRequestsBlocked": true,
+      "open": true,
+      "imageDoesNotClose": true,
+      "exactReturnAnchor": true
+    }
+  ],
+  "passed": false,
+  "error": "Fitted photo must visibly follow the finger before release"
+}

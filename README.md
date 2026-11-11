@@ -7,11 +7,12 @@
 | [cloud-council](skills/cloud-council/SKILL.md) | Независимые заключения, доказательства, ограниченная перекрёстная критика и проверка итогового вывода |
 | [spec](skills/spec/SKILL.md) | Проверяемое ТЗ, вопросы только по существенным пробелам, связи REQ → AC → проверка |
 | [spec-driven-development](skills/spec-driven-development/SKILL.md) | Общий маршрут от ТЗ до реализации и сверки требований; использует spec как единый стандарт |
+| [create-technopack-presentations](skills/create-technopack-presentations/SKILL.md) | Автономные HTML-презентации в документальном стандарте; полный пакет с образцами, проверками и [инструкцией установки](skills/create-technopack-presentations/INSTALL.md) |
 
 Установка через Skills CLI:
 
 ```sh
-npx skills add istt1899/agent-skills --skill cloud-council spec spec-driven-development
+npx skills add istt1899/agent-skills --skill cloud-council spec spec-driven-development create-technopack-presentations
 ```
 
 Можно установить только совет или только spec, выбрав соответствующий аргумент
@@ -20,6 +21,8 @@ npx skills add istt1899/agent-skills --skill cloud-council spec spec-driven-deve
 Для ручной установки скопируйте нужную папку из skills/ целиком, вместе с references/,
 в каталог навыков своего агента. После установки агент должен прочитать SKILL.md;
 наличие файлов само по себе не подтверждает их загрузку работающим агентом.
+
+Навык презентаций также доступен [одним переносимым Markdown-файлом](create-technopack-presentations.portable.md): он содержит весь каталог в проверяемом ZIP-блоке и инструкцию распаковки без доступа к исходной машине.
 
 Примеры вызова:
 

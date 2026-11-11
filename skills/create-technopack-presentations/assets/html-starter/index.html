@@ -1,0 +1,1269 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Утверждённый стандарт презентаций Марка Спектора: документальная история, короткая предыстория, удобное чтение и проверяемые источники.">
+<meta name="presentation-format" content="documentary-story">
+<meta name="provenance" content="{&quot;built_at&quot;:&quot;{{BUILT_AT_MSK}}&quot;,&quot;source&quot;:&quot;{{AGENT_SOURCE_KEY}}&quot;,&quot;source_name&quot;:&quot;{{AGENT_SOURCE}}&quot;,&quot;session_title&quot;:&quot;{{SESSION_TITLE}}&quot;,&quot;session_code&quot;:&quot;{{SESSION_CODE}}&quot;,&quot;source_session_id&quot;:&quot;{{SOURCE_SESSION_ID}}&quot;,&quot;session_id&quot;:&quot;{{SOURCE_SESSION_ID}}&quot;,&quot;branch&quot;:&quot;{{GIT_BRANCH}}&quot;,&quot;commit&quot;:&quot;{{GIT_COMMIT}}&quot;,&quot;repo&quot;:&quot;{{REPOSITORY}}&quot;,&quot;client&quot;:&quot;{{CLIENT}}&quot;,&quot;object&quot;:&quot;{{OBJECT}}&quot;,&quot;doc_kind&quot;:&quot;{{DOCUMENT_TYPE}}&quot;,&quot;status&quot;:&quot;{{STATUS}}&quot;,&quot;edition&quot;:&quot;{{EDITION}}&quot;,&quot;tags&quot;:[&quot;{{MARKINFO_TAG_1}}&quot;],&quot;markinfo_tags&quot;:[&quot;{{MARKINFO_TAG_1}}&quot;]}">
+<title>Документальная история · стандарт презентаций Марка Спектора</title>
+<style>
+:root{--paper:#f5f4f0;--ink:#202423;--muted:#64716e;--line:#d9dfd9;--night:#0b1519;--night-ink:#f6f8f7;--night-muted:#b9c7c6;--accent:#0b665c;--accent-dark:#acd5d6;--focus:#bd6500;font:100%/1.6 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color-scheme:light}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:6rem}
+body{margin:0;background:var(--paper);color:var(--ink);-webkit-text-size-adjust:100%}
+a{color:var(--accent);text-underline-offset:.22em}
+a:hover{text-decoration-thickness:2px}
+a,summary{-webkit-tap-highlight-color:transparent}
+:focus-visible{outline:3px solid var(--focus);outline-offset:5px}
+img,svg{max-width:100%;height:auto}
+.wrap{width:min(76rem,calc(100% - 3rem));margin-inline:auto}
+.reading{width:min(42rem,calc(100% - 3rem));margin-inline:auto}
+.skip-link{position:fixed;left:1rem;top:-8rem;z-index:100;padding:.8rem 1.1rem;background:white;color:var(--ink);border-radius:.6rem}
+.skip-link:focus{top:1rem}
+.topbar{position:sticky;top:0;z-index:30;background:rgba(245,245,242,.93);box-shadow:0 2px 24px #0d141c0a}
+.provenance{background:#0d171a;color:#dce8e6;border-bottom:1px solid #29383a;font-size:.75rem;line-height:1.45}
+.provenance-inner{width:min(76rem,calc(100% - 3rem));margin-inline:auto;padding:.7rem 0;display:grid;gap:.55rem}
+.provenance-fields,.provenance-tags{display:flex;flex-wrap:wrap;gap:.35rem 1rem;min-width:0}
+.provenance-fields span{min-width:0;overflow-wrap:anywhere}.provenance-fields b{color:#fff}
+.provenance-tags{gap:.35rem}.provenance-tag{max-width:100%;padding:.18rem .45rem;border:1px solid #435356;border-radius:999px;overflow-wrap:anywhere}
+@supports(backdrop-filter:blur(1px)){.topbar{background:rgba(245,245,242,.78);backdrop-filter:blur(20px) saturate(130%)}}
+.bar-inner{display:flex;align-items:center;gap:2rem;min-height:4.4rem}
+.brand{color:var(--ink);font-size:.77rem;font-weight:650;letter-spacing:.12em;white-space:nowrap;text-decoration:none}
+nav{display:flex;margin-left:auto;gap:.2rem;overflow-x:auto}
+nav a{display:inline-flex;align-items:center;min-height:44px;padding:.4rem .9rem;border-radius:2rem;color:var(--muted);font-size:.83rem;white-space:nowrap;text-decoration:none;transition:background-color 180ms,color 180ms,transform 120ms}
+nav a:hover{background:#e5e8e9;color:var(--ink)}
+nav a:active,.button:active{transform:scale(.98)}
+.hero{background:var(--night);color:var(--night-ink);padding:clamp(4rem,10vw,9rem) 0 5rem}
+.eyebrow{margin:0 0 1.6rem;font-size:.78rem;font-weight:650;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-dark)}
+h1,h2,h3{font-weight:600;text-wrap:balance}
+h1{max-width:13ch;font-size:clamp(3rem,7.3vw,6.5rem);line-height:1.01;letter-spacing:-.048em;margin:0 0 2rem}
+h1 em{font-style:normal;color:var(--accent-dark)}
+.hero .lead{max-width:42rem;font-size:clamp(1.13rem,2vw,1.45rem);line-height:1.55;color:var(--night-muted);margin:0 0 2rem}
+.button{display:inline-flex;align-items:center;gap:1.5rem;min-height:48px;border-radius:2rem;padding:.7rem 1.35rem;background:var(--night-ink);color:var(--night);font-size:.94rem;font-weight:600;text-decoration:none;transition:transform 120ms,background-color 180ms}
+.button:hover{background:#dcebfa;text-decoration:none}
+.hero-foot{display:flex;justify-content:space-between;gap:2rem;margin-top:4.5rem;padding-top:1.4rem;border-top:1px solid #ffffff28;color:var(--night-muted);font-size:.8rem}
+section{padding:clamp(4rem,8vw,7rem) 0;scroll-margin-top:5rem}
+.chapter{display:block;color:var(--accent);font-size:.76rem;font-weight:650;letter-spacing:.12em;text-transform:uppercase;margin-bottom:1.5rem}
+h2{font-size:clamp(2.1rem,4.2vw,3.7rem);line-height:1.1;letter-spacing:-.035em;margin:0 0 1.6rem}
+h3{font-size:1.35rem;line-height:1.25;margin:0 0 .6rem;letter-spacing:-.015em}
+p{margin:0 0 1.2rem}
+.prose{font-size:clamp(1.1rem,1.55vw,1.25rem);line-height:1.65}
+.prose p:last-child{margin-bottom:0}
+.pull{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:1.4rem 0;margin:2rem 0;color:var(--muted);font-size:1.05rem}
+.interlude{background:#14202b;color:var(--night-ink)}
+.interlude .chapter{color:var(--accent-dark)}
+.interlude h2{max-width:17ch}
+.interlude p{max-width:35rem;color:var(--night-muted);font-size:1.18rem}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.illustration{margin:0}
+.illustration svg{display:block;width:100%;border-radius:1.6rem;background:#e8edf0}
+figcaption{color:var(--muted);font-size:.84rem;margin-top:.9rem;line-height:1.5}
+.note{color:var(--muted);font-size:.95rem;border-left:2px solid var(--accent);padding-left:1.15rem;margin-top:2rem}
+.formats{margin-top:2.5rem}
+.format{display:grid;grid-template-columns:4rem 1fr 1.3fr;gap:1rem 2rem;padding:2rem 0;border-top:1px solid var(--line)}
+.format:last-child{border-bottom:1px solid var(--line)}
+.format-number{font-size:1.1rem;color:var(--accent);font-variant-numeric:tabular-nums}
+.format p{margin:0;color:var(--muted);font-size:1.05rem}
+details{border-top:1px solid var(--line);margin-top:1rem}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{position:relative;cursor:pointer;list-style:none;padding:1.3rem 2.5rem 1.3rem 0;font-size:1.02rem;font-weight:600;min-height:48px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:.2rem;top:1rem;font-size:1.6rem;font-weight:400;color:var(--accent)}
+details[open] summary::after{content:"−"}
+.detail-body{padding:0 0 1.4rem;color:var(--muted);font-size:1rem}
+.detail-body ol{padding-left:1.2rem}
+.detail-body li{margin-bottom:.6rem}
+.closing{font-size:clamp(1.35rem,2.5vw,1.9rem);line-height:1.4;letter-spacing:-.015em;margin-top:2.5rem}
+footer{padding:2rem 0 3rem;border-top:1px solid var(--line);font-size:.82rem;color:var(--muted)}
+@media(max-width:760px){
+.wrap,.reading{width:min(100% - 2.25rem,42rem)}
+.provenance-inner{width:min(100% - 2.25rem,42rem)}
+.bar-inner{gap:.2rem;align-items:flex-start;flex-direction:column;padding:.7rem 0 .3rem}
+.brand{font-size:.68rem}
+nav{margin-left:-.6rem;width:calc(100% + .6rem)}
+nav a{padding:.35rem .65rem;font-size:.78rem}
+html{scroll-padding-top:7rem}
+section{scroll-margin-top:6.5rem}
+.hero{padding-top:3.8rem}
+.hero-foot{margin-top:3rem;flex-direction:column;gap:.5rem}
+.split{grid-template-columns:1fr}
+.format{grid-template-columns:2rem 1fr;gap:.6rem 1rem}
+.format p{grid-column:2}
+}
+@media(prefers-reduced-transparency:reduce){.topbar{background:var(--paper);backdrop-filter:none}}
+@media(prefers-contrast:more){:root{--muted:#303942;--line:#858b90;--night-muted:#e1e7ed}.topbar{background:var(--paper);backdrop-filter:none;border-bottom:1px solid var(--ink)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@media print{
+html{scroll-behavior:auto}
+body,.hero,.interlude,.provenance{background:white;color:#171a1d}
+.provenance-fields b{color:#171a1d}.provenance-tag{border-color:#777}
+.topbar,.skip-link,.button{display:none!important}
+.hero,section{padding:1.5rem 0}
+.wrap,.reading{width:100%}
+h1{font-size:3rem;max-width:18ch}h2{font-size:2rem}
+h1 em,.eyebrow,.chapter,.interlude .chapter,.hero .lead,.hero-foot,.interlude p{color:#303942}
+.hero-foot{margin-top:2rem;border-color:#b8bec4}
+.split{display:block}
+.illustration{max-width:24rem;margin:1.5rem auto}
+.format,figure{break-inside:avoid}
+details::details-content{content-visibility:visible!important;display:contents}
+details>div{display:block!important}
+summary::after{display:none}
+a{color:#174f87}
+footer{padding-bottom:0}
+}
+</style>
+<!-- shared-photo-viewer-css:start -->
+<style>
+/* Shared offline viewer: the toolbar never belongs to the image scroll area. */
+:root {
+  --viewer-top: max(8px, env(safe-area-inset-top, 0px));
+  --viewer-right: max(8px, env(safe-area-inset-right, 0px));
+  --viewer-bottom: max(8px, env(safe-area-inset-bottom, 0px));
+  --viewer-left: max(8px, env(safe-area-inset-left, 0px));
+}
+html.viewer-open { overflow: hidden; }
+a[data-zoom] { scroll-margin-top: 110px; }
+.fallback-close, .fallback-backdrop { display: none; }
+
+/* One embedded image per slot. The background is a sibling link, never a wrapper. */
+@media screen {
+  html:has(:is(.photo, .zoomable):target),
+  html:has(a[data-zoom]:target) { scroll-behavior: auto; }
+  html:has(:is(.photo, .zoomable):target) { overflow: hidden; }
+  :is(.photo, .zoomable):target {
+    position: fixed;
+    z-index: 100;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    max-width: none;
+    margin: 0 !important;
+    padding: var(--viewer-top) var(--viewer-right) var(--viewer-bottom) var(--viewer-left);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    gap: 8px;
+    overflow: hidden;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+  }
+  :is(.photo, .zoomable):target > .fallback-backdrop {
+    position: fixed;
+    inset: 0;
+    display: block;
+    z-index: 0;
+    background: rgba(0, 0, 0, .94);
+    cursor: zoom-out;
+  }
+  :is(.photo, .zoomable):target > .fallback-close {
+    position: relative;
+    z-index: 2;
+    grid-row: 1;
+    justify-self: end;
+    align-self: start;
+    display: inline-flex;
+  }
+  :is(.photo, .zoomable):target > a[data-zoom] {
+    display: contents;
+    cursor: default;
+  }
+  :is(.photo, .zoomable):target > a[data-zoom] > img {
+    position: relative;
+    z-index: 1;
+    grid-row: 2;
+    place-self: center;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 0;
+    min-height: 0;
+    aspect-ratio: auto;
+    object-fit: contain;
+    margin: 0;
+    filter: none;
+  }
+  :is(.photo, .zoomable):target > figcaption {
+    position: relative;
+    z-index: 1;
+    grid-row: 3;
+    display: block;
+    margin: 0;
+    padding: 8px;
+    max-height: 20vh;
+    overflow: auto;
+    font-size: .85rem;
+    background: #08131e;
+    color: #f4f7fa;
+  }
+  :is(.photo, .zoomable):target .zoom-hint { display: none; }
+}
+
+#photo-viewer {
+  position: fixed;
+  inset: var(--viewer-top) var(--viewer-right) var(--viewer-bottom) var(--viewer-left);
+  margin: auto;
+  padding: 0;
+  width: calc(100% - var(--viewer-left) - var(--viewer-right));
+  /* Insets resolve against the visible containing block even when the page is zoomed. */
+  height: auto;
+  max-width: 1440px;
+  max-height: 920px;
+  overflow: hidden;
+  border: 1px solid #4d6271;
+  border-radius: 12px;
+  color: var(--ink);
+  background: #08131e;
+}
+#photo-viewer:not([open]) { display: none; }
+#photo-viewer[open] { display: flex; flex-direction: column; }
+#photo-viewer::backdrop { background: rgba(0, 0, 0, .92); }
+.viewer-bar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px 12px;
+  align-items: start;
+  flex-shrink: 0;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--line);
+  background: #08131e;
+}
+#viewer-title {
+  grid-row: 1;
+  grid-column: 1;
+  align-self: center;
+  min-width: 0;
+  max-height: 3.2em;
+  overflow: auto;
+  overflow-wrap: anywhere;
+  margin: 0;
+  font-size: .85rem;
+  line-height: 1.5;
+}
+#viewer-close { grid-row: 1; grid-column: 2; }
+.viewer-actions { grid-row: 2; grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+#viewer-scale { min-width: 4.5em; color: #f4f7fa; font-size: .85rem; font-variant-numeric: tabular-nums; }
+.fallback-close, .viewer-bar button {
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid #7591a6;
+  border-radius: 8px;
+  background: #172c3c;
+  color: #fff;
+  font-size: .88rem;
+  line-height: 1.35;
+  font-weight: 650;
+  text-decoration: none;
+  touch-action: manipulation;
+}
+.viewer-bar button:active, .fallback-close:active { background: #2d4b61; }
+.viewer-bar button[aria-pressed="true"] { background: #c7e1ee; color: #07111b; }
+.viewer-stage {
+  overflow: auto;
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+  display: grid;
+  place-items: center;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr);
+  padding: 8px;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x pan-y pinch-zoom;
+}
+.viewer-stage img {
+  transform: translate3d(0, var(--dismiss-y, 0px), 0);
+  cursor: zoom-in;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  min-width: 0;
+  min-height: 0;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  margin: auto;
+}
+.js #photo-viewer .viewer-stage:not(.native):not(.browser-zoomed) { touch-action: pan-x pinch-zoom; }
+.viewer-stage.dismiss-moving { overflow: hidden; }
+.viewer-stage.dismiss-moving img { will-change: transform; }
+.viewer-stage.native { display: block; place-items: normal; }
+.viewer-stage.native img {
+  justify-self: start;
+  align-self: start;
+  width: var(--zoom-width, var(--natural-width));
+  max-width: none;
+  max-height: none;
+  height: auto;
+  margin: 0;
+  cursor: grab;
+}
+.viewer-stage.dragging, .viewer-stage.dragging img { cursor: grabbing; }
+.viewer-help {
+  flex-shrink: 0;
+  max-height: 20vh;
+  overflow: auto;
+  padding: 8px 12px;
+  border-top: 1px solid var(--line);
+  font-size: .73rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+.viewer-touch-help { display: none; }
+@media (pointer: coarse) {
+  #viewer-image { -webkit-touch-callout: none; }
+  .viewer-touch-help { display: inline; }
+  .viewer-mouse-help { display: none; }
+}
+@media (max-width: 560px) {
+  .viewer-bar { padding: 6px 8px; gap: 4px 8px; }
+  #viewer-title { max-height: 3em; font-size: .78rem; }
+  .viewer-actions {
+    display: grid;
+    grid-template-columns: 44px 44px minmax(0, 1fr) auto;
+    gap: 4px 8px;
+  }
+  .viewer-actions button { padding: 8px; }
+  #viewer-scale { grid-column: 1 / -1; font-size: .75rem; line-height: 1.2; }
+  .viewer-help { padding: 6px 8px; margin: 0; }
+}
+@media (max-height: 480px) and (min-width: 600px) {
+  .viewer-bar { grid-template-columns: minmax(0, 1fr) auto auto; padding: 6px 8px; gap: 8px; }
+  #viewer-close { grid-column: 3; }
+  .viewer-actions { grid-row: 1; grid-column: 2; flex-wrap: nowrap; }
+  #viewer-title { max-height: 3em; font-size: .75rem; }
+  #viewer-scale { min-width: 3.8em; font-size: .75rem; }
+  .viewer-help { padding: 4px 8px; margin: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #photo-viewer, :is(.photo, .zoomable):target { animation: none; transition: none; }
+  .viewer-stage { scroll-behavior: auto; }
+}
+@media print {
+  #photo-viewer, .fallback-close, .fallback-backdrop { display: none !important; }
+  html.viewer-open, body.viewer-open { overflow: visible !important; }
+  body.viewer-open { position: static !important; width: auto !important; padding-right: 0 !important; }
+}
+
+/* Scope the dark viewer independently of a chapter's light palette. */
+#photo-viewer{--ink:#f4f7fa;--muted:#c5d3dc;--line:#4d6271;color:#f4f7fa;height:calc(100% - var(--viewer-top) - var(--viewer-bottom))}
+.zoomable > a[data-zoom]{display:block;position:relative;touch-action:manipulation}
+.zoomable > a[data-zoom] > img{display:block;width:100%;height:auto;border-radius:1.6rem}
+:is(.photo,.zoomable):target > a[data-zoom] > img{border-radius:0}
+.zoom-hint{position:absolute;right:12px;bottom:12px;padding:6px 10px;border-radius:24px;background:#08131e;color:#f4f7fa;font-size:.8rem}
+@media screen{:is(.photo,.zoomable):target{height:auto}}
+</style>
+<!-- shared-photo-viewer-css:end -->
+<!-- shared-inline-help-style:start -->
+<style data-inline-help>
+
+.tyre-spec-trigger{border-radius:4px;text-decoration:underline;text-underline-offset:3px;box-decoration-break:clone;-webkit-box-decoration-break:clone;touch-action:manipulation}
+.tyre-spec-details .tyre-spec-trigger{display:block;min-height:44px;padding:5px 0}
+.tyre-reading-guide .tyre-spec-trigger{display:inline-flex;align-items:center;min-height:44px}
+.tyre-spec-trigger[aria-expanded="true"]{background:#d8eee5;color:#123f34;outline:2px solid #28735f;outline-offset:3px;text-decoration-thickness:2px}
+.tyre-spec-trigger:focus-visible{outline:3px solid #28735f;outline-offset:4px}
+.tyre-spec-popover[hidden]{display:none!important}
+.tyre-spec-popover{position:fixed;z-index:500;box-sizing:border-box;width:21rem;max-width:calc(100vw - 24px);margin:0;padding:14px 16px 12px;border:1px solid #6c8d7e;border-radius:12px;background:#fff;color:#172d25;box-shadow:0 8px 28px #11291e26;font:14px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;overflow:auto;overscroll-behavior:contain;animation:tyre-spec-in 130ms ease-out}
+.tyre-spec-popover .tyre-spec-popover-title{margin:0;padding-right:34px;font-size:1rem;font-weight:700;line-height:1.35;letter-spacing:0;color:#172d25}
+.tyre-spec-popover .tyre-spec-popover-text{margin:9px 0 5px;color:#263e33;overflow-wrap:anywhere}
+.tyre-spec-popover [data-spec-close]{position:absolute;right:4px;top:3px;display:grid;place-items:center;min-width:44px;min-height:44px;padding:0;border:0;border-radius:8px;background:transparent;color:#284e3e;font:24px/1 system-ui;cursor:pointer}
+.tyre-spec-popover [data-spec-faq]{display:inline-flex;align-items:center;min-height:44px;margin:0;color:#175d46;font-size:14px;font-weight:650;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
+.tyre-spec-popover :focus-visible{outline:3px solid #28735f;outline-offset:2px}
+@keyframes tyre-spec-in{from{opacity:0}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){.tyre-spec-popover{animation:none}}
+@media(prefers-contrast:more){.tyre-spec-popover{border:2px solid #172d25;box-shadow:none}.tyre-spec-trigger[aria-expanded="true"]{outline-width:3px}}
+@media(forced-colors:active){.tyre-spec-popover{background:Canvas;color:CanvasText;border:2px solid CanvasText}.tyre-spec-popover .tyre-spec-popover-title,.tyre-spec-popover .tyre-spec-popover-text{color:CanvasText}.tyre-spec-trigger[aria-expanded="true"]{background:Highlight;color:HighlightText;outline-color:Highlight}.tyre-spec-popover [data-spec-close],.tyre-spec-popover [data-spec-faq]{color:LinkText}}
+@media print{.tyre-spec-popover{display:none!important}.tyre-spec-trigger[aria-expanded="true"]{background:transparent;color:inherit;outline:0}}
+
+</style>
+<!-- shared-inline-help-style:end -->
+</head>
+<body data-presentation-format="documentary-story">
+<a class="skip-link" href="#main">К основному содержанию</a>
+<aside class="provenance" aria-label="Происхождение презентации" data-provenance="1" data-markinfo-trace data-source-session-id="{{SOURCE_SESSION_ID}}">
+<div class="provenance-inner">
+<div class="provenance-fields">
+<span>Собрано: <b>{{BUILT_AT_MSK}}</b></span>
+<span>Источник: <b data-markinfo-source data-provenance-field="source">{{AGENT_SOURCE}}</b></span>
+<span>Задача: <b data-markinfo-session-title data-provenance-field="session_title">{{SESSION_TITLE}}</b></span>
+<span>Сессия: <b data-markinfo-session-id data-provenance-field="session_code">{{AGENT_SOURCE}} · {{SESSION_CODE}}</b></span>
+<span>Клиент: <b>{{CLIENT}}</b></span>
+<span>Объект: <b>{{OBJECT}}</b></span>
+<span>Тип: <b>{{DOCUMENT_TYPE}}</b></span>
+<span>Статус: <b>{{STATUS}}</b></span>
+<span>Редакция: <b>{{EDITION}}</b></span>
+<span>Код: <b>{{REPOSITORY}} · {{GIT_BRANCH}} · {{GIT_COMMIT}}</b></span>
+</div>
+<div class="provenance-tags" data-markinfo-tags data-provenance-field="tags"><span class="provenance-tag" data-markinfo-tag>#{{MARKINFO_TAG_1}}</span></div>
+</div>
+</aside>
+<header class="topbar">
+<div class="wrap bar-inner">
+<a class="brand" href="#main">МАРК СПЕКТОР / ИСТОРИИ</a>
+<nav aria-label="По материалу">
+<a href="#opening">Начало</a><a href="#rhythm">История</a><a href="#feel">Дизайн</a><a href="#formats">Сценарий</a><a href="#sources">Досье</a>
+</nav>
+</div>
+</header>
+<main id="main">
+<header class="hero">
+<div class="wrap">
+<p class="eyebrow">Документальная история · утверждённый стандарт</p>
+<h1>Презентации, которые хочется <em>дочитать.</em></h1>
+<p class="lead">У хорошего исследования бывает трудный вход: цифры появляются раньше, чем становится понятна сама история. Новый формат начинает с темы и короткой предыстории, затем ведёт читателя через фотографии, события и доказательства.</p>
+<a class="button" href="#opening">Посмотреть, как это устроено <span aria-hidden="true">↓</span></a>
+<div class="hero-foot"><span>Визуальная история · удобное чтение · проверяемые факты</span><span>Редакционный образец</span></div>
+</div>
+</header>
+<section id="opening" data-source="internal:format-standard-v2" data-version="2">
+<div class="reading prose" data-reveal>
+<span class="chapter">Начало</span>
+<h2>Сначала — причина остаться.</h2>
+<p>Что произошло? Почему об этом стоит знать? Какой ответ скрывается за знакомой фотографией или короткой новостью? Открытие даёт контекст и обозначает тот вопрос, ради которого стоит прокрутить дальше.</p>
+<p>Для истории о событии достаточно назвать тему, объяснить предысторию и показать необычное обстоятельство. Для коммерческого предложения входом становится конкретная ценность для клиента.</p>
+<p class="pull">Первые 10–15 секунд — редакционный ориентир: читатель должен понять тему и интерес материала. Это не результат измерения аудитории.</p>
+</div>
+</section>
+<section id="rhythm" class="interlude" data-source="internal:format-standard-v2" data-version="2">
+<div class="wrap" data-reveal>
+<span class="chapter">Ритм</span>
+<h2>У истории меняется масштаб.</h2>
+<p>Большая фотография даёт почувствовать место. Короткий абзац переводит внимание к человеку. Схема объясняет то, что трудно представить. Подробности остаются под рукой, когда хочется проверить версию.</p>
+</div>
+</section>
+<section id="feel" data-source="internal:format-standard-v2" data-version="2">
+<div class="wrap split">
+<figure id="documentary-visual" class="illustration zoomable" data-reveal>
+<a class="fallback-backdrop" href="#thumb-documentary-visual" tabindex="-1" aria-hidden="true"></a>
+<a class="fallback-close" href="#thumb-documentary-visual" aria-label="Закрыть изображение"><span aria-hidden="true">×</span> Закрыть</a>
+<a id="thumb-documentary-visual" href="#documentary-visual" data-zoom data-caption="Схема структуры" aria-label="Увеличить схему структуры">
+<img src="data:image/svg+xml;base64,PHN2ZyBzdHlsZT0iYmFja2dyb3VuZDojZThlZGYwIiB2aWV3Qm94PSIwIDAgNjAwIDYyMCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsbGVkYnk9InZpc3VhbC10aXRsZSB2aXN1YWwtZGVzYyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHRpdGxlIGlkPSJ2aXN1YWwtdGl0bGUiPtCc0LDRgtC10YDQuNCw0Lsg0YDQsNGB0LrRgNGL0LLQsNC10YLRgdGPINC+0YIg0L7QsdGJ0LXQs9C+INC/0LvQsNC90LAg0Log0LTQtdGC0LDQu9GP0Lw8L3RpdGxlPgo8ZGVzYyBpZD0idmlzdWFsLWRlc2MiPtCi0YDQuCDQvNCw0YHRiNGC0LDQsdCwINC/0YDQtdC00YHRgtCw0LLQu9C10L3QuNGPOiDQt9Cw0LzQtdGC0L3QsNGPINC+0LHQu9C+0LbQutCwLCDRgdC/0L7QutC+0LnQvdCw0Y8g0LrQvtC70L7QvdC60LAg0LTQu9GPINGH0YLQtdC90LjRjyDQuCDQtNC+0YHRgtGD0L/QvdC+0LUg0LTQvtGB0YzQtS48L2Rlc2M+CjxyZWN0IHg9IjYwIiB5PSI1NCIgd2lkdGg9IjQ4MCIgaGVpZ2h0PSIyNDAiIHJ4PSIyNCIgZmlsbD0iIzE0MjAyYiIvPgo8Y2lyY2xlIGN4PSI0NDUiIGN5PSIxNDIiIHI9IjU2IiBmaWxsPSIjODZjNmY0IiBvcGFjaXR5PSIuMTUiLz4KPHBhdGggZD0iTTcyIDI2OSAyMDQgMTU3IDI5MCAyMjIgMzc4IDE1MyA1MjggMjY2IiBmaWxsPSJub25lIiBzdHJva2U9IiM4NmM2ZjQiIHN0cm9rZS13aWR0aD0iMiIvPgo8dGV4dCB4PSI5MiIgeT0iMTA3IiBmaWxsPSIjYjdjMWNjIiBmb250LWZhbWlseT0ic3lzdGVtLXVpLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTMiIGxldHRlci1zcGFjaW5nPSIyIj7QntCR0JvQntCW0JrQkDwvdGV4dD4KPHRleHQgeD0iOTIiIHk9IjE1NCIgZmlsbD0iI2Y2ZjhmYiIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxzYW5zLXNlcmlmIiBmb250LXNpemU9IjI5IiBmb250LXdlaWdodD0iNjAwIj7QotC10LzQsC4g0JrQvtC90YLQtdC60YHRgi48L3RleHQ+Cjx0ZXh0IHg9IjkyIiB5PSIxOTEiIGZpbGw9IiNmNmY4ZmIiIGZvbnQtZmFtaWx5PSJzeXN0ZW0tdWksc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyOSIgZm9udC13ZWlnaHQ9IjYwMCI+0JjQvdGC0LXRgNC10YEuPC90ZXh0Pgo8cmVjdCB4PSIxMTMiIHk9IjMyNiIgd2lkdGg9IjM3NCIgaGVpZ2h0PSIxNzYiIHJ4PSIxNSIgZmlsbD0iI2ZkZmRmYiIvPgo8dGV4dCB4PSIxNDEiIHk9IjM2MyIgZmlsbD0iIzE3MWExZCIgZm9udC1mYW1pbHk9InN5c3RlbS11aSxzYW5zLXNlcmlmIiBmb250LXNpemU9IjE4IiBmb250LXdlaWdodD0iNjAwIj7QodC/0L7QutC+0LnQvdGL0Lkg0YLQtdC80L8g0YfRgtC10L3QuNGPPC90ZXh0Pgo8cGF0aCBkPSJNMTQxIDM5M0g0NDNNMTQxIDQxMEg0NTBNMTQxIDQyN0g0MTBNMTQxIDQ1OEg0NDFNMTQxIDQ3NUgzODAiIHN0cm9rZT0iIzkyOWVhOCIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPHBhdGggZD0iTTE0MCA1NDlINDU4IiBzdHJva2U9IiNhNmIyYmMiLz4KPHRleHQgeD0iMTQxIiB5PSI1NzciIGZpbGw9IiM1NTVlNjYiIGZvbnQtZmFtaWx5PSJzeXN0ZW0tdWksc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNSI+0JTQvtGB0YzQtSDQuCDQuNGB0YLQvtGH0L3QuNC60Lgg0LLRgdC10LPQtNCwINC00L7RgdGC0YPQv9C90Ys8L3RleHQ+Cjwvc3ZnPg==" width="600" height="620" alt="Схема структуры: обложка, спокойная колонка для чтения и доступное досье" decoding="async">
+<span class="zoom-hint" aria-hidden="true">Увеличить ↗</span></a>
+<figcaption>Схема структуры. В реальном материале визуальный язык определяет тема.</figcaption>
+</figure>
+<div class="prose" data-reveal>
+<span class="chapter">Ощущение</span>
+<h2>Интерфейс следует за вниманием.</h2>
+<p>Крупный текст и свободная колонка помогают читать. Полупрозрачная навигация остаётся рядом. Нажатие получает быстрый отклик, а мягкое появление визуала не задерживает доступ к содержанию.</p>
+<p>Движение дополняет уже готовую страницу. При отключённых скриптах или сокращении анимации история остаётся целой.</p>
+<p class="note">Сохраняем собственный бренд. У Apple берём дисциплину иерархии, материалов и реакции на действие.</p>
+</div>
+</div>
+</section>
+<section id="formats" data-source="internal:format-standard-v2" data-version="2">
+<div class="wrap">
+<span class="chapter">Утверждённая подача</span>
+<h2 data-reveal>Документальная история.</h2>
+<div class="formats">
+<article class="format" data-reveal><span class="format-number">01</span><h3>Войти в тему</h3><p>Понятный заголовок, короткая предыстория и конкретный повод продолжить. Фотообложка знакомит с предметом истории.</p></article>
+<article class="format" data-reveal><span class="format-number">02</span><h3>Разобраться в истории</h3><p>Связанные главы, крупные фотографии, люди и доказательства. Светлая колонка для чтения сменяется акцентами по ходу событий.</p></article>
+<article class="format" data-reveal><span class="format-number">03</span><h3>Проверить подробности</h3><p>Финал отвечает на вопрос начала. Досье сохраняет источники, расчёты и версии, которые хочется рассмотреть подробнее.</p></article>
+</div>
+</div>
+</section>
+<section id="sources" data-source="internal:format-standard-v2" data-version="2">
+<div class="reading">
+<span class="chapter tyre-reading-guide"><a class="tyre-spec-trigger" href="#source-register" data-spec-title="Досье" data-spec-text="Здесь собраны источники, расчёты и ограничения: по ним можно проверить выводы презентации." data-spec-topic="sources">Досье<span aria-hidden="true"> ⓘ</span></a></span>
+<h2>Глубина остаётся доступной.</h2>
+<p class="prose">Основная история даёт связную картину. Здесь читатель может проверить, на чём она основана и что осталось неизвестным.</p>
+<details id="source-register" open>
+<summary>Что входит в реестр источников</summary>
+<div class="detail-body"><ol><li>Точный документ, ссылка или файл и дата версии.</li><li>Утверждение, которое этот источник поддерживает.</li><li>Важное ограничение, спорная версия или основание расчёта.</li><li>Для фотографии — авторство, дата и связь с описанным событием.</li></ol></div>
+</details>
+<details>
+<summary>Основа этого образца</summary>
+<div class="detail-body">Формат «Документальная история» выбран Марком Спектором 6 сентября 2026 года как стандарт всех его презентаций. Утверждённый визуальный образец — статья о K2. Этот starter показывает каркас; фотографии и содержание подбираются к новой теме. Показатели вовлечённости не заявлены.</div>
+</details>
+<p class="closing">Обложка приглашает войти. История даёт ответ. Источники позволяют его проверить.</p>
+</div>
+</section>
+</main>
+<footer><div class="wrap">Марк Спектор · документальный стандарт презентаций · редакционный каркас</div></footer>
+<script>
+(() => {
+  const preference = matchMedia('(prefers-reduced-motion: reduce)');
+  const active = new Set();
+  const cancel = () => { for (const animation of active) animation.cancel(); active.clear(); };
+  preference.addEventListener('change', () => { if (preference.matches) cancel(); });
+  if (preference.matches || !('IntersectionObserver' in window) || !Element.prototype.animate) return;
+  const observer = new IntersectionObserver(entries => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      observer.unobserve(entry.target);
+      if (preference.matches) continue;
+      const animation = entry.target.animate(
+        [{opacity:.76,transform:'translateY(12px)'},{opacity:1,transform:'translateY(0)'}],
+        {duration:440,easing:'cubic-bezier(.2,.7,.2,1)'}
+      );
+      active.add(animation);
+      animation.finished.then(() => active.delete(animation), () => active.delete(animation));
+    }
+  }, {threshold:.12});
+  document.querySelectorAll('[data-reveal]').forEach(element => observer.observe(element));
+})();
+</script>
+<!-- shared-photo-viewer:start -->
+<dialog id="photo-viewer" aria-labelledby="viewer-title">
+<div class="viewer-bar">
+<button type="button" id="viewer-close" aria-label="Закрыть фотографию"><span aria-hidden="true">×</span> Закрыть</button>
+<p id="viewer-title"></p>
+<div class="viewer-actions">
+<button type="button" id="viewer-zoom-in" aria-label="Увеличить фотографию">+</button>
+<button type="button" id="viewer-zoom-out" aria-label="Уменьшить фотографию">−</button>
+<button type="button" id="viewer-fit">Вписать</button>
+<button type="button" id="viewer-native" aria-pressed="false">100%</button>
+<output id="viewer-scale" aria-label="Масштаб фотографии">Вписано</output>
+</div></div>
+<div class="viewer-stage"><img id="viewer-image" alt=""></div>
+<p class="viewer-help"><span class="viewer-touch-help">Потяните фото вверх или вниз — закрыть. Двойной тап — увеличить или вписать. В увеличении свайп перемещает кадр; два пальца — масштаб браузера.</span><span class="viewer-mouse-help">Нажмите на фото — увеличить; ещё раз — вписать. + / − и колёсико — масштаб; перетаскивание и стрелки — перемещение. Enter / пробел — увеличить или вписать. 100% — исходный размер.</span></p>
+</dialog>
+<script>
+
+(() => {
+  'use strict';
+  const dialog = document.getElementById('photo-viewer');
+  if (!dialog) return;
+  document.documentElement.classList.add('js');
+  const viewer = document.getElementById('viewer-image');
+  const stage = dialog.querySelector('.viewer-stage');
+  stage.style.touchAction = 'none';viewer.style.touchAction = 'none';stage.dataset.multitouch = 'image-pinch';
+  const title = document.getElementById('viewer-title');
+  const nativeButton = document.getElementById('viewer-native');
+  const zoomIn = document.getElementById('viewer-zoom-in');
+  const zoomOut = document.getElementById('viewer-zoom-out');
+  const scaleLabel = document.getElementById('viewer-scale');
+  const closeButton = document.getElementById('viewer-close');
+  const touchHint = 'Двойной тап — увеличить или вписать. В полном кадре потяните фото вверх или вниз, чтобы закрыть. '
+    + 'В увеличении один палец перемещает фото; два пальца увеличивают и уменьшают само изображение.';
+  const touchHelp = dialog.querySelector('.viewer-touch-help');
+  if (touchHelp) touchHelp.textContent = touchHint;
+  else if (window.matchMedia?.('(pointer: coarse)').matches) {
+    const help = dialog.querySelector('.viewer-help');
+    if (help) help.textContent = touchHint;
+  }
+  const page = document.documentElement;
+  const historyKey = 'documentaryPhotoViewer';
+  const owner = `viewer-${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
+  let serial = 0;
+  let session = null;
+  let pendingBack = null;
+  let pendingOpen = null;
+  let lastClosed = null;
+  let gesture = null;
+  let backdropTap = false;
+  let sourceWidth = 0;
+  let fitWidth = 0;
+  let pendingWheel = null;
+  let imageGesture = null;
+  let imageTap = false;
+  let lastTouchTap = null;
+  let openingTouch = null;
+  let openingClick = null;
+  let thumbnailTouch = null;
+  let pointerEventsObserved = false;
+  let lastInputTouch = false;
+  let dismissY = 0;
+  let dismissVelocity = 0;
+  let dismissFrame = null;
+  let dismissToken = 0;
+  let historyAvailable = true;
+  viewer.draggable = false;
+  viewer.tabIndex = 0;
+  viewer.setAttribute('role', 'button');
+  const imageState = (enlarged) => {
+    viewer.setAttribute('aria-pressed', String(enlarged));
+    viewer.setAttribute('aria-label', `${enlarged ? 'Уменьшить' : 'Увеличить'} фотографию: ${viewer.alt || ''}`);
+  };
+  const cancelImageGesture = () => {
+    const previous = imageGesture;
+    imageGesture = null;
+    imageTap = false;
+    stage.classList.remove('dragging');
+    if (previous && viewer.hasPointerCapture?.(previous.id)) viewer.releasePointerCapture(previous.id);
+  };
+  const browserScale = () => window.visualViewport?.scale || 1;
+  const canDismiss = () => !stage.classList.contains('native') && browserScale() <= 1.02;
+  const stopDismissSpring = () => {
+    dismissToken++;
+    if (dismissFrame !== null) window.cancelAnimationFrame?.(dismissFrame);
+    dismissFrame = null;
+  };
+  const paintDismiss = () => {
+    viewer.style.setProperty('--dismiss-y', `${dismissY}px`);
+    if (Math.abs(dismissY) > .1) stage.classList.add('dismiss-moving');
+    else stage.classList.remove('dismiss-moving');
+  };
+  const resetDismiss = () => {
+    stopDismissSpring(); dismissY = 0; dismissVelocity = 0;
+    viewer.style.removeProperty('--dismiss-y');
+    stage.classList.remove('dismiss-moving');
+  };
+  const settleDismiss = (closeAfter = false, velocity = 0) => {
+    stopDismissSpring();
+    if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) {
+      if (closeAfter) finishClose(); else resetDismiss();
+      return;
+    }
+    if (!dismissY && !closeAfter) {resetDismiss(); return;}
+    const exitDistance = (stage.clientHeight + viewer.getBoundingClientRect().height) / 2 + 8;
+    const target = closeAfter ? Math.sign(dismissY) * exitDistance * 1.15 : 0;
+    dismissVelocity = velocity;
+    const token = dismissToken;
+    let previousTime = null, elapsed = 0;
+    const frame = (time) => {
+      if (token !== dismissToken || !session) return;
+      const dt = previousTime === null || !Number.isFinite(time) ? 1 / 60
+        : Math.max(1 / 240, Math.min(1 / 30, (time - previousTime) / 1000));
+      previousTime = time; elapsed += dt;
+      dismissVelocity += ((target - dismissY) * 340 - dismissVelocity * 36) * dt;
+      dismissY += dismissVelocity * dt;
+      paintDismiss();
+      if ((closeAfter && Math.abs(dismissY) >= exitDistance)
+        || (Math.abs(target - dismissY) < .5 && Math.abs(dismissVelocity) < 8) || elapsed >= .75) {
+        if (closeAfter) finishClose(); else resetDismiss();
+      } else dismissFrame = window.requestAnimationFrame(frame);
+    };
+    dismissFrame = window.requestAnimationFrame(frame);
+  };
+  const syncBrowserScale = () => {
+    if (browserScale() > 1.02) {
+      stage.classList.add('browser-zoomed'); cancelImageGesture(); resetDismiss();
+    } else stage.classList.remove('browser-zoomed');
+  };
+  window.visualViewport?.addEventListener('resize', syncBrowserScale);
+  const suspendHostSwipes = (current) => {
+    const host = window.Telegram?.WebApp;
+    try {
+      if (host?.isVersionAtLeast?.('7.7') && host.isVerticalSwipesEnabled === true
+        && typeof host.disableVerticalSwipes === 'function' && typeof host.enableVerticalSwipes === 'function') {
+        current.swipeHost = host;
+        host.disableVerticalSwipes();
+      }
+    } catch (_) {if (host?.isVerticalSwipesEnabled !== false) current.swipeHost = null;}
+  };
+  const restoreHostSwipes = (closed) => {
+    try {
+      if (closed.swipeHost?.isVerticalSwipesEnabled === false) closed.swipeHost.enableVerticalSwipes();
+    } catch (_) {}
+    closed.swipeHost = null;
+  };
+  const historyMarker = () => {
+    try {return window.history.state && window.history.state[historyKey];} catch (_) {return null;}
+  };
+  const saveStyle = (style, names) => names.map((name) => [name, style.getPropertyValue(name), style.getPropertyPriority(name)]);
+  const restoreStyle = (style, values) => values.forEach(([name, value, priority]) => {
+    if (value) style.setProperty(name, value, priority); else style.removeProperty(name);
+  });
+  const restorePosition = (closed) => {
+    if (session || lastClosed !== closed) return;
+    const behavior = saveStyle(page.style, ['scroll-behavior']);
+    page.style.setProperty('scroll-behavior', 'auto');
+    if (closed.trigger.isConnected) closed.trigger.focus({preventScroll: true});
+    window.scrollTo(closed.x, closed.y);
+    restoreStyle(page.style, behavior);
+  };
+  const restoreHistory = (closed) => {
+    if (closed.scrollRestoration !== null) {
+      try {window.history.scrollRestoration = closed.scrollRestoration;} catch (_) {}
+    }
+  };
+  const fit = () => {
+    resetDismiss();
+    lastTouchTap = null;
+    openingTouch = null;
+    pendingWheel = null;
+    cancelImageGesture();
+    stage.classList.remove('native');
+    syncBrowserScale();
+    viewer.style.removeProperty('--zoom-width');
+    nativeButton.setAttribute('aria-pressed', 'false');
+    imageState(false);
+    stage.scrollTo(0, 0);
+    fitWidth = viewer.getBoundingClientRect().width || 0;
+    if (scaleLabel) scaleLabel.textContent = 'Вписано';
+  };
+  const setZoomWidth = (requestedWidth, point = null) => {
+    resetDismiss();
+    lastTouchTap = null;
+    openingTouch = null;
+    pendingWheel = null;
+    const before = viewer.getBoundingClientRect();
+    if (!before.width || !before.height || !Number.isFinite(requestedWidth)) return;
+    if (!stage.classList.contains('native') || !fitWidth) fitWidth = before.width;
+    const width = Math.max(fitWidth, Math.min(Math.max(sourceWidth, fitWidth) * 4, requestedWidth));
+    if (width <= fitWidth + .5) {fit(); return;}
+    // Button zoom anchors to the visible viewport, not the off-screen image centre.
+    const box = stage.getBoundingClientRect();
+    const x = point ? point.clientX : box.left + stage.clientWidth / 2;
+    const y = point ? point.clientY : box.top + stage.clientHeight / 2;
+    const rx = Math.max(0, Math.min(1, Number.isFinite(point?.ratioX) ? point.ratioX : (x - before.left) / before.width));
+    const ry = Math.max(0, Math.min(1, Number.isFinite(point?.ratioY) ? point.ratioY : (y - before.top) / before.height));
+    cancelImageGesture();
+    viewer.style.setProperty('--zoom-width', `${width}px`);
+    stage.classList.add('native');
+    nativeButton.setAttribute('aria-pressed', String(width === sourceWidth));
+    imageState(true);
+    if (scaleLabel) scaleLabel.textContent = `${Math.round(width / sourceWidth * 100)}%`;
+    const after = viewer.getBoundingClientRect();
+    stage.scrollTo({left: stage.scrollLeft + after.left + rx * after.width - x,
+      top: stage.scrollTop + after.top + ry * after.height - y});
+  };
+  const zoomBy = (factor, point = null) => setZoomWidth(viewer.getBoundingClientRect().width * factor, point);
+  const toggleZoom = (point = null) => {
+    if (stage.classList.contains('native')) {fit(); return;}
+    // Small originals must visibly enlarge too; 100% remains a separate mode.
+    setZoomWidth(Math.max(sourceWidth, viewer.getBoundingClientRect().width * 2), point);
+  };
+  // Opening a modal can shift the visual viewport while the finger stays still.
+  const tapPoint = (event) => Number.isFinite(event.screenX) && Number.isFinite(event.screenY)
+    ? {x: event.screenX, y: event.screenY, screen: true}
+    : {x: event.clientX, y: event.clientY, screen: false};
+  const nearbyTap = (earlier, event) => earlier && event.timeStamp - earlier.time >= 0
+    && event.timeStamp - earlier.time <= 320 && earlier.screen === tapPoint(event).screen
+    && Math.hypot(tapPoint(event).x - earlier.x, tapPoint(event).y - earlier.y) <= 28;
+  const rememberTap = (event) => ({time: event.timeStamp, ...tapPoint(event)});
+  const touchClick = (event) => event.pointerType === 'touch' || event.sourceCapabilities?.firesTouchEvents
+    || (!pointerEventsObserved && event.detail !== 0 && window.matchMedia?.('(any-pointer: coarse)').matches);
+  const touchTap = (event) => {
+    if (nearbyTap(lastTouchTap, event)) {lastTouchTap = null; toggleZoom(event);}
+    else lastTouchTap = rememberTap(event);
+  };
+  const zoomFromThumbnail = (event, opening) => toggleZoom({
+    clientX: event.clientX, clientY: event.clientY, ratioX: opening.ratioX, ratioY: opening.ratioY,
+  });
+  const openPhoto = (link, marker = null) => {
+    if (typeof dialog.showModal !== 'function') return false;
+    if (pendingBack) {pendingOpen = link; return true;}
+    if (session) return true;
+    const original = link.querySelector('img');
+    const current = {
+      trigger: link, x: window.scrollX, y: window.scrollY,
+      bodyStyle: saveStyle(document.body.style, ['position', 'top', 'left', 'width', 'overflow', 'padding-right']),
+      scrollRestoration: null, token: marker ? marker.token : `${owner}-${++serial}`, owned: false,
+    };
+    viewer.src = original.dataset.full || original.src;
+    viewer.alt = original.alt;
+    sourceWidth = Number(original.dataset.sourceWidth) || original.naturalWidth || original.width;
+    fitWidth = 0;
+    viewer.style.setProperty('--natural-width', `${sourceWidth}px`);
+    title.textContent = link.dataset.caption || link.parentElement.querySelector('figcaption strong').textContent;
+    fit();
+    try {dialog.showModal();} catch (_) {return false;}
+    session = current;
+    suspendHostSwipes(current);
+    lastClosed = null;
+    const gutter = Math.max(0, window.innerWidth - page.clientWidth);
+    const padding = parseFloat(window.getComputedStyle(document.body).paddingRight) || 0;
+    document.body.style.setProperty('position', 'fixed');
+    document.body.style.setProperty('top', `${-current.y}px`);
+    document.body.style.setProperty('left', `${-current.x}px`);
+    document.body.style.setProperty('width', '100%');
+    document.body.style.setProperty('overflow', 'hidden');
+    document.body.style.setProperty('padding-right', `${padding + gutter}px`);
+    document.body.classList.add('viewer-open');
+    page.classList.add('viewer-open');
+    try {
+      if (!historyAvailable) throw new Error('History unavailable');
+      current.scrollRestoration = window.history.scrollRestoration;
+      window.history.scrollRestoration = 'manual';
+      if (!marker) {
+        const state = window.history.state;
+        window.history.pushState({...state, [historyKey]: {owner, token: current.token, trigger: link.id}}, '', window.location.href);
+      }
+      current.owned = true;
+    } catch (_) {
+      // Some standalone file viewers deny History API. The visible close still works.
+      historyAvailable = false;
+      restoreHistory(current);
+      current.scrollRestoration = null;
+    }
+    closeButton.focus({preventScroll: true});
+    return true;
+  };
+  const finishClose = (consumeHistory = true) => {
+    if (!session) return;
+    const closed = session;
+    session = null;
+    restoreHostSwipes(closed);
+    resetDismiss();
+    lastClosed = closed;
+    pendingWheel = null;
+    cancelImageGesture();
+    gesture = null;
+    lastTouchTap = null;
+    openingTouch = null;
+    openingClick = null;
+    backdropTap = false;
+    if (dialog.open) dialog.close();
+    document.body.classList.remove('viewer-open');
+    page.classList.remove('viewer-open');
+    restoreStyle(document.body.style, closed.bodyStyle);
+    restorePosition(closed);
+    const marker = historyMarker();
+    if (consumeHistory && closed.owned && marker && marker.token === closed.token) {
+      pendingBack = closed;
+      try {window.history.back();} catch (_) {pendingBack = null; historyAvailable = false;}
+    }
+    window.requestAnimationFrame(() => {
+      restorePosition(closed);
+      if (!session && !pendingBack) restoreHistory(closed);
+    });
+  };
+  let thumbnailGesture = null;
+  document.addEventListener('pointerdown', (event) => {
+    pointerEventsObserved = true;
+    thumbnailTouch = null;
+    const link = event.target.closest('a[data-zoom]');
+    thumbnailGesture = !session && link && event.pointerType === 'touch' && event.isPrimary !== false
+      ? {link, id: event.pointerId, ...rememberTap(event)} : null;
+  });
+  document.addEventListener('pointermove', (event) => {
+    if (thumbnailGesture && (event.pointerId !== thumbnailGesture.id
+      || Math.hypot(tapPoint(event).x - thumbnailGesture.x, tapPoint(event).y - thumbnailGesture.y) > 8)) thumbnailGesture = null;
+  });
+  document.addEventListener('pointercancel', () => {thumbnailGesture = null;});
+  document.addEventListener('pointerup', (event) => {
+    const started = thumbnailGesture;
+    thumbnailGesture = null;
+    if (!session && event.pointerType === 'touch') {
+      const link = event.target.closest('a[data-zoom]');
+      if (link) thumbnailTouch = {link, ...rememberTap(event)};
+      // A browser can omit compatibility click after a preceding native gesture.
+      if (link && started?.link === link && started.id === event.pointerId && nearbyTap(started, event)
+        && Math.hypot(tapPoint(event).x - started.x, tapPoint(event).y - started.y) <= 8) {
+        const bounds = link.querySelector('img').getBoundingClientRect();
+        if (openPhoto(link)) {
+          openingTouch = {...rememberTap(event), ratioX: (event.clientX - bounds.left) / bounds.width,
+            ratioY: (event.clientY - bounds.top) / bounds.height};
+          event.preventDefault();
+        }
+      }
+    }
+  });
+  document.addEventListener('click', (event) => {
+    const link = event.target.closest('a[data-zoom]');
+    if (link && session) {event.preventDefault(); return;}
+    const bounds = link?.querySelector('img')?.getBoundingClientRect();
+    if (link && openPhoto(link)) {
+      event.preventDefault();
+      // A double tap begins on the thumbnail, before its image moves into the dialog.
+      if (touchClick(event) || (thumbnailTouch?.link === link && nearbyTap(thumbnailTouch, event))) {
+        openingTouch = {...rememberTap(event), ratioX: bounds?.width ? (event.clientX - bounds.left) / bounds.width : undefined,
+          ratioY: bounds?.height ? (event.clientY - bounds.top) / bounds.height : undefined};
+      }
+      thumbnailTouch = null;
+    }
+  });
+  dialog.addEventListener('click', (event) => {
+    // Touch target adjustment may point at an adjacent control, even though the
+    // press and release were in a visible gap. Dismiss before that control fires.
+    if (backdropTap && emptyBackdrop(event)) {
+      backdropTap = false;
+      event.preventDefault(); event.stopImmediatePropagation?.(); finishClose(); return;
+    }
+    const fromOpening = nearbyTap(openingClick, event);
+    const legacyOpening = !pointerEventsObserved && touchClick(event) && nearbyTap(openingTouch, event);
+    if (!fromOpening && !legacyOpening) return;
+    const opening = openingTouch;
+    openingClick = null;
+    openingTouch = null;
+    backdropTap = false;
+    if (legacyOpening) zoomFromThumbnail(event, opening);
+    event.preventDefault();
+    event.stopImmediatePropagation?.();
+  }, true);
+  closeButton.addEventListener('click', () => finishClose());
+  dialog.addEventListener('cancel', (event) => {
+    event.preventDefault();
+    finishClose();
+  });
+  dialog.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {event.preventDefault(); finishClose();}
+    if (event.target === viewer && !event.ctrlKey && !event.metaKey && !event.altKey) {
+      if (event.key === 'Enter' || event.key === ' ') {event.preventDefault(); toggleZoom(); return;}
+      if (['+', '=', '-'].includes(event.key)) {
+        event.preventDefault(); zoomBy(event.key === '-' ? 1 / 1.25 : 1.25); return;
+      }
+      if (stage.classList.contains('native') && ['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'].includes(event.key)) {
+        event.preventDefault();
+        stage.scrollTo({left: stage.scrollLeft + (event.key === 'ArrowLeft' ? -80 : event.key === 'ArrowRight' ? 80 : 0),
+          top: stage.scrollTop + (event.key === 'ArrowUp' ? -80 : event.key === 'ArrowDown' ? 80 : 0)});
+        return;
+      }
+    }
+    if (event.key !== 'Tab') return;
+    const controls = Array.from(dialog.querySelectorAll('a[href], button, input, select, textarea, [tabindex]')).filter((element) =>
+      element.tabIndex >= 0 && !element.matches(':disabled')
+      && !element.closest('[hidden], [inert], [aria-hidden="true"]')
+      && element.getClientRects().length > 0
+      && !['hidden', 'collapse'].includes(window.getComputedStyle(element).visibility));
+    const first = controls[0];
+    const last = controls[controls.length - 1];
+    if (!first) {event.preventDefault(); dialog.focus({preventScroll: true}); return;}
+    if (event.shiftKey && (document.activeElement === first || !controls.includes(document.activeElement))) {
+      event.preventDefault(); last.focus({preventScroll: true});
+    } else if (!event.shiftKey && (document.activeElement === last || !controls.includes(document.activeElement))) {
+      event.preventDefault(); first.focus({preventScroll: true});
+    }
+  });
+  window.addEventListener('popstate', () => {
+    if (pendingBack) {
+      const closed = pendingBack;
+      pendingBack = null;
+      restorePosition(closed);
+      const next = pendingOpen;
+      pendingOpen = null;
+      window.requestAnimationFrame(() => {
+        restorePosition(closed);
+        if (!session) restoreHistory(closed);
+        if (next && next.isConnected) openPhoto(next);
+      });
+      return;
+    }
+    const marker = historyMarker();
+    if (session && (!marker || marker.token !== session.token)) finishClose(false);
+    if (!session && marker && marker.owner === owner) {
+      const link = document.getElementById(marker.trigger);
+      if (link && link.matches('a[data-zoom]')) openPhoto(link, marker);
+    }
+  });
+  document.getElementById('viewer-fit').addEventListener('click', fit);
+  zoomIn?.addEventListener('click', () => zoomBy(1.25));
+  zoomOut?.addEventListener('click', () => zoomBy(1 / 1.25));
+  nativeButton.addEventListener('click', () => {
+    resetDismiss();
+    lastTouchTap = null;
+    openingTouch = null;
+    pendingWheel = null;
+    if (!stage.classList.contains('native')) fitWidth = viewer.getBoundingClientRect().width;
+    cancelImageGesture();
+    viewer.style.removeProperty('--zoom-width');
+    stage.classList.add('native');
+    nativeButton.setAttribute('aria-pressed', 'true');
+    imageState(true);
+    if (scaleLabel) scaleLabel.textContent = '100%';
+    stage.scrollTo({left: Math.max(0, (sourceWidth - stage.clientWidth) / 2), top: 0});
+  });
+  viewer.addEventListener('wheel', (event) => {
+    // Preserve browser zoom/pinch and horizontal or modified scrolling.
+    if (!session || !dialog.open || event.ctrlKey || event.metaKey || event.altKey || event.shiftKey
+      || event.cancelable === false || !Number.isFinite(event.deltaY) || event.deltaY === 0
+      || Math.abs(event.deltaX || 0) > Math.abs(event.deltaY)) return;
+    event.preventDefault();
+    const unit = event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? stage.clientHeight : 1;
+    const delta = Math.max(-200, Math.min(200, event.deltaY * unit));
+    const factor = Math.exp(-delta * .002);
+    if (pendingWheel) {
+      pendingWheel.factor = Math.max(.125, Math.min(8, pendingWheel.factor * factor));
+      pendingWheel.point.clientX = event.clientX; pendingWheel.point.clientY = event.clientY;
+      return;
+    }
+    const batch = {factor, point: {clientX: event.clientX, clientY: event.clientY}};
+    pendingWheel = batch;
+    window.requestAnimationFrame(() => {
+      if (pendingWheel !== batch || !session) return;
+      pendingWheel = null;
+      zoomBy(batch.factor, batch.point);
+    });
+  }, {passive: false});
+  window.addEventListener('resize', () => {if (session) fit();});
+  dialog.addEventListener('close', () => {
+    if (!dialog.open) finishClose();
+  });
+  const emptyBackdrop = (event) => {
+    const target = document.elementFromPoint?.(event.clientX, event.clientY) || event.target;
+    if (target === viewer) return false;
+    if (target === stage || target === dialog) return true;
+    if (!dialog.contains(target)) return event.target === dialog;
+    if (target.closest('button,input,output,a,select,textarea,[role="button"]')) return false;
+    const text = target.closest('#viewer-title,.viewer-help');
+    if (text) {
+      const range = document.createRange(); range.selectNodeContents(text);
+      const onText = Array.from(range.getClientRects()).some(rect => event.clientX >= rect.left && event.clientX <= rect.right
+        && event.clientY >= rect.top && event.clientY <= rect.bottom);
+      range.detach?.();
+      if (onText) return false;
+    }
+    return true;
+  };
+  dialog.addEventListener('pointerdown', (event) => {
+    pointerEventsObserved = true;
+    lastInputTouch = event.pointerType === 'touch';
+    pendingWheel = null;
+    cancelImageGesture();
+    const dismiss = event.pointerType === 'touch' && event.isPrimary !== false && canDismiss()
+      && (event.target === viewer || event.target === stage);
+    if (dismiss) stopDismissSpring(); else resetDismiss();
+    const continuesOpening = event.pointerType === 'touch' && event.isPrimary !== false && nearbyTap(openingTouch, event);
+    if (!continuesOpening) openingTouch = null;
+    openingClick = null;
+    if (event.pointerType !== 'touch' || event.target !== viewer || event.isPrimary === false) lastTouchTap = null;
+    if ((event.target === viewer || continuesOpening || dismiss) && event.isPrimary !== false && event.button === 0) {
+      imageGesture = {id: event.pointerId, x: event.clientX, y: event.clientY,
+        type: event.pointerType, started: event.timeStamp, opening: continuesOpening,
+        dismiss, axis: null, offset: dismissY, lastY: event.clientY, lastTime: event.timeStamp, velocity: 0,
+        left: stage.scrollLeft, top: stage.scrollTop, moved: false,
+        pan: stage.classList.contains('native')};
+      if (imageGesture.pan) viewer.setPointerCapture?.(event.pointerId);
+    }
+    backdropTap = false;
+    gesture = !continuesOpening && event.isPrimary !== false && event.button === 0 && emptyBackdrop(event)
+      ? {id: event.pointerId, x: event.clientX, y: event.clientY} : null;
+  });
+  dialog.addEventListener('pointermove', (event) => {
+    if (imageGesture && event.pointerId === imageGesture.id) {
+      const dx = event.clientX - imageGesture.x, dy = event.clientY - imageGesture.y;
+      if (Math.hypot(dx, dy) > 8) {imageGesture.moved = true; lastTouchTap = null; openingTouch = null;}
+      if (imageGesture.dismiss) {
+        if (!canDismiss()) {imageGesture.dismiss = false; resetDismiss();}
+        else {
+          if (!imageGesture.axis && Math.hypot(dx, dy) > 8) {
+            if (Math.abs(dy) > Math.abs(dx) * 1.15) {
+              imageGesture.axis = 'y'; viewer.setPointerCapture?.(event.pointerId);
+            } else if (Math.abs(dx) > Math.abs(dy) * 1.15) {
+              imageGesture.axis = 'x'; imageGesture.dismiss = false; resetDismiss();
+            }
+          }
+          if (imageGesture.axis === 'y') {
+            if (event.cancelable !== false) event.preventDefault();
+            const dt = event.timeStamp - imageGesture.lastTime;
+            if (dt > 0) imageGesture.velocity = (event.clientY - imageGesture.lastY) / dt;
+            imageGesture.lastY = event.clientY; imageGesture.lastTime = event.timeStamp;
+            dismissY = imageGesture.offset + dy;
+            paintDismiss(); gesture = null; backdropTap = false;
+          }
+        }
+      }
+      if (imageGesture.moved && imageGesture.pan) {
+        event.preventDefault();
+        stage.classList.add('dragging');
+        stage.scrollTo(imageGesture.left - dx, imageGesture.top - dy);
+      }
+    }
+    if (gesture && (event.pointerId !== gesture.id || Math.hypot(event.clientX - gesture.x, event.clientY - gesture.y) > 8)) gesture = null;
+  });
+  dialog.addEventListener('pointerup', (event) => {
+    const previous = imageGesture;
+    const tap = Boolean(previous && event.pointerId === previous.id && (event.target === viewer || previous.opening)
+      && !previous.moved && Math.hypot(event.clientX - previous.x, event.clientY - previous.y) <= 8);
+    // Touch has no single-tap action: native scrolling and the second tap stay independent.
+    imageTap = tap && previous.type !== 'touch';
+    imageGesture = null;
+    stage.classList.remove('dragging');
+    if (previous && viewer.hasPointerCapture?.(previous.id)) viewer.releasePointerCapture(previous.id);
+    if (previous?.dismiss && previous.axis === 'y') {
+      const velocity = event.timeStamp - previous.lastTime <= 100 ? previous.velocity : 0;
+      const threshold = Math.min(160, Math.max(80, stage.clientHeight * .22));
+      const distance = Math.abs(dismissY);
+      const flick = distance >= 40 && Math.abs(velocity) >= .65 && Math.sign(velocity) === Math.sign(dismissY)
+        && Math.abs(dismissY + velocity * 180) >= threshold;
+      const reversing = Math.abs(velocity) >= .35 && velocity * dismissY < 0;
+      imageTap = false; lastTouchTap = null; openingTouch = null; backdropTap = false; gesture = null;
+      settleDismiss(canDismiss() && !reversing && (distance >= threshold || flick), velocity * 1000);
+      return;
+    }
+    backdropTap = Boolean(gesture && event.pointerId === gesture.id && emptyBackdrop(event)
+      && Math.hypot(event.clientX - gesture.x, event.clientY - gesture.y) <= 8);
+    gesture = null;
+    if (previous?.type === 'touch') {
+      if (tap && event.timeStamp - previous.started <= 350) {
+        if (previous.opening && nearbyTap(openingTouch, event)) {
+          const opening = openingTouch;
+          openingClick = rememberTap(event);
+          openingTouch = null;
+          zoomFromThumbnail(event, opening);
+        } else touchTap(event);
+      } else {lastTouchTap = null; openingTouch = null;}
+    }
+    if (dismissY) settleDismiss();
+  });
+  dialog.addEventListener('pointercancel', () => {
+    cancelImageGesture(); lastTouchTap = null; openingTouch = null; gesture = null; backdropTap = false;
+    settleDismiss();
+  });
+  viewer.addEventListener('lostpointercapture', () => {
+    if (imageGesture) {cancelImageGesture(); settleDismiss();}
+  });
+
+  // Image-local multitouch. Page/browser zoom stays available outside the image stage.
+  const photoTouches = new Map();
+  let photoPinch = null, photoOnePan = null, photoMultitouch = false, suppressPhotoClickUntil = 0;
+  const midpoint = () => {const p=[...photoTouches.values()]; return {x:(p[0].x+p[1].x)/2,y:(p[0].y+p[1].y)/2,d:Math.hypot(p[1].x-p[0].x,p[1].y-p[0].y)};};
+  const resetPhotoTouches = () => {photoTouches.clear();photoPinch=null;photoOnePan=null;photoMultitouch=false;delete stage.dataset.gesture;};
+  stage.addEventListener('pointerdown', event => {
+    if(event.pointerType!=='touch'||browserScale()>1.02)return;
+    photoTouches.set(event.pointerId,{x:event.clientX,y:event.clientY});
+    if(photoTouches.size<2)return;
+    const p=midpoint(),box=viewer.getBoundingClientRect();
+    photoPinch={distance:Math.max(8,p.d),width:box.width,rx:(p.x-box.left)/box.width,ry:(p.y-box.top)/box.height};
+    photoMultitouch=true;photoOnePan=null;cancelImageGesture();resetDismiss();gesture=null;backdropTap=false;lastTouchTap=null;openingTouch=null;
+    for(const id of photoTouches.keys())try{stage.setPointerCapture(id);}catch(_){}
+    stage.dataset.gesture='pinch';event.preventDefault();event.stopImmediatePropagation();
+  },{capture:true,passive:false});
+  stage.addEventListener('pointermove', event => {
+    if(!photoTouches.has(event.pointerId))return;
+    photoTouches.set(event.pointerId,{x:event.clientX,y:event.clientY});
+    if(photoPinch&&photoTouches.size>=2){
+      const p=midpoint();setZoomWidth(photoPinch.width*p.d/photoPinch.distance,{clientX:p.x,clientY:p.y,ratioX:photoPinch.rx,ratioY:photoPinch.ry});
+      stage.dataset.gesture='pinch';event.preventDefault();event.stopImmediatePropagation();
+    }else if(photoMultitouch&&photoOnePan&&event.pointerId===photoOnePan.id){
+      stage.scrollTo(photoOnePan.left-(event.clientX-photoOnePan.x),photoOnePan.top-(event.clientY-photoOnePan.y));
+      event.preventDefault();event.stopImmediatePropagation();
+    }
+  },{capture:true,passive:false});
+  const finishPhotoPointer = event => {
+    if(!photoTouches.has(event.pointerId))return;
+    photoTouches.delete(event.pointerId);
+    if(!photoMultitouch)return;
+    photoPinch=null;cancelImageGesture();resetDismiss();gesture=null;backdropTap=false;lastTouchTap=null;openingTouch=null;
+    suppressPhotoClickUntil=performance.now()+400;
+    if(photoTouches.size===1){const [id,p]=[...photoTouches][0];photoOnePan={id,x:p.x,y:p.y,left:stage.scrollLeft,top:stage.scrollTop};stage.dataset.gesture='pan';}
+    else resetPhotoTouches();
+    event.preventDefault();event.stopImmediatePropagation();
+  };
+  stage.addEventListener('pointerup',finishPhotoPointer,{capture:true,passive:false});
+  stage.addEventListener('pointercancel',finishPhotoPointer,{capture:true,passive:false});
+  stage.addEventListener('click',event=>{if(photoMultitouch||performance.now()<suppressPhotoClickUntil){event.preventDefault();event.stopImmediatePropagation();}},{capture:true});
+  dialog.addEventListener('close',resetPhotoTouches);window.addEventListener('blur',resetPhotoTouches);
+
+  viewer.addEventListener('dragstart', (event) => event.preventDefault());
+  viewer.addEventListener('contextmenu', (event) => {
+    if (session && lastInputTouch) event.preventDefault();
+  });
+  dialog.addEventListener('click', (event) => {
+    if (event.target === viewer && imageTap) {event.preventDefault(); toggleZoom(event);}
+    else if (event.target === viewer && !pointerEventsObserved && !imageGesture) {
+      event.preventDefault();
+      if (touchClick(event)) touchTap(event); else toggleZoom(event);
+    }
+    imageTap = false;
+    const dismiss = backdropTap && emptyBackdrop(event);
+    backdropTap = false;
+    if (dismiss) {event.preventDefault(); finishClose();}
+  });
+})();
+
+</script>
+<!-- shared-photo-viewer:end -->
+<!-- shared-inline-help:start -->
+<aside id="tyre-spec-popover" class="tyre-spec-popover" role="dialog" aria-modal="false" aria-labelledby="tyre-spec-popover-title" aria-describedby="tyre-spec-popover-text" hidden>
+<h2 id="tyre-spec-popover-title" class="tyre-spec-popover-title" tabindex="-1"></h2>
+<button type="button" data-spec-close aria-label="Закрыть пояснение">×</button>
+<p id="tyre-spec-popover-text" class="tyre-spec-popover-text"></p>
+<a data-spec-faq target="_blank" rel="noopener noreferrer">Подробнее в FAQ ↗</a>
+</aside>
+<script data-inline-help>
+
+(()=>{
+  'use strict';
+  function install(){
+    const panel=document.getElementById('tyre-spec-popover');
+    if(!panel||panel.dataset.installed)return;
+    panel.dataset.installed='true';
+    document.body.append(panel);
+    const title=panel.querySelector('.tyre-spec-popover-title');
+    const text=panel.querySelector('.tyre-spec-popover-text');
+    const closeButton=panel.querySelector('[data-spec-close]');
+    const faq=panel.querySelector('[data-spec-faq]');
+    const triggers=document.querySelectorAll('a.tyre-spec-trigger[data-spec-title][data-spec-text][href]');
+    let active=null, frame=0, pressed=null, pressedAt=0, longPress=false;
+    for(const trigger of triggers){
+      trigger.setAttribute('aria-haspopup','dialog');
+      trigger.setAttribute('aria-controls',panel.id);
+      trigger.setAttribute('aria-expanded','false');
+    }
+    function triggerFrom(node){return node instanceof Element?node.closest('a.tyre-spec-trigger[data-spec-title][data-spec-text][href]'):null;}
+    function close(restoreFocus=false){
+      const previous=active;
+      if(previous)previous.setAttribute('aria-expanded','false');
+      active=null;panel.hidden=true;
+      if(frame){cancelAnimationFrame(frame);frame=0;}
+      if(restoreFocus&&previous&&previous.isConnected)previous.focus({preventScroll:true});
+    }
+    function place(){
+      frame=0;if(!active||panel.hidden)return;
+      const viewport=window.visualViewport;
+      const left=viewport?viewport.offsetLeft:0,top=viewport?viewport.offsetTop:0;
+      const width=viewport?viewport.width:window.innerWidth,height=viewport?viewport.height:window.innerHeight;
+      const rect=active.getBoundingClientRect();
+      if(rect.bottom<top||rect.top>top+height||rect.right<left||rect.left>left+width){close();return;}
+      // CSS zoom (including an ancestor) scales fixed-position CSS lengths,
+      // whereas client rects already contain that scale. Calibrate the panel's
+      // coordinate space before clamping to the actual visual viewport.
+      panel.style.left='0px';panel.style.top='0px';
+      const origin=panel.getBoundingClientRect();
+      const scaleX=origin.width/panel.offsetWidth||1,scaleY=origin.height/panel.offsetHeight||1;
+      panel.style.maxWidth=Math.max(0,(width-24)/scaleX)+'px';
+      panel.style.maxHeight=Math.max(0,(height-24)/scaleY)+'px';
+      const bounds=panel.getBoundingClientRect(),w=bounds.width,h=bounds.height;
+      const x=Math.min(Math.max(left+12,rect.left),left+width-w-12);
+      let y=rect.bottom+9;
+      if(y+h>top+height-12&&rect.top-h-9>=top+12)y=rect.top-h-9;
+      y=Math.max(top+12,Math.min(y,top+height-h-12));
+      panel.style.left=(x-origin.left)/scaleX+'px';panel.style.top=(y-origin.top)/scaleY+'px';
+    }
+    function schedule(){if(active&&!frame)frame=requestAnimationFrame(place);}
+    function open(trigger,keyboard){
+      if(active===trigger){close();return;}
+      close();active=trigger;
+      title.textContent=trigger.dataset.specTitle;
+      text.textContent=trigger.dataset.specText;
+      faq.href=trigger.href;
+      faq.setAttribute('aria-label','Подробнее: '+trigger.dataset.specTitle);
+      trigger.setAttribute('aria-expanded','true');
+      panel.hidden=false;place();
+      if(keyboard&&!panel.hidden)title.focus({preventScroll:true});
+    }
+    document.addEventListener('pointerdown',event=>{
+      const trigger=triggerFrom(event.target);
+      pressed=trigger;pressedAt=performance.now();longPress=false;
+      if(active&&!panel.contains(event.target)&&trigger!==active)close();
+    },true);
+    document.addEventListener('contextmenu',event=>{if(triggerFrom(event.target))longPress=true;});
+    document.addEventListener('click',event=>{
+      const trigger=triggerFrom(event.target);
+      if(!trigger||event.defaultPrevented||event.button!==0||event.ctrlKey||event.metaKey||event.shiftKey||event.altKey)return;
+      if(event.detail!==0&&pressed===trigger&&(longPress||performance.now()-pressedAt>500))return;
+      event.preventDefault();open(trigger,event.detail===0);
+    });
+    closeButton.addEventListener('click',()=>close(true));
+    document.addEventListener('keydown',event=>{
+      if(!active)return;
+      if(event.key==='Escape'){event.preventDefault();event.stopPropagation();close(true);}
+      else if(event.key==='Tab'&&!event.shiftKey&&document.activeElement===active){event.preventDefault();closeButton.focus();}
+      else if(event.key==='Tab'&&event.shiftKey&&(document.activeElement===title||document.activeElement===closeButton)){
+        event.preventDefault();close(true);
+      }else if(event.key==='Tab'&&!event.shiftKey&&document.activeElement===faq){
+        const stops=Array.from(document.querySelectorAll('a[href],button,input,select,textarea,[tabindex]'))
+          .filter(node=>node.tabIndex>=0&&!node.disabled&&!panel.contains(node)&&!node.closest('[inert]')&&node.getClientRects().length);
+        const next=stops[stops.indexOf(active)+1];
+        if(next){event.preventDefault();close();next.focus();}
+        else close(true); // Native Tab can leave the document from the last trigger.
+      }
+    });
+    document.addEventListener('focusin',event=>{if(active&&event.target!==active&&!panel.contains(event.target))close();});
+    document.addEventListener('scroll',schedule,{passive:true,capture:true});
+    window.addEventListener('resize',schedule,{passive:true});
+    if(window.visualViewport){window.visualViewport.addEventListener('resize',schedule,{passive:true});window.visualViewport.addEventListener('scroll',schedule,{passive:true});}
+    window.addEventListener('pagehide',()=>close());
+    window.addEventListener('beforeprint',()=>close());
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install,{once:true});else install();
+})();
+
+</script>
+<!-- shared-inline-help:end -->
+</body>
+</html>
