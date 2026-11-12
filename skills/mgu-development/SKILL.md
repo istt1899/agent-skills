@@ -1,8 +1,8 @@
 ---
 name: mgu-development
-description: Разработка, аудит и публикация приложений для BMW MGU (iDrive 7, G01 и совместимые): паспорт платформы, mgu-deploy/mgu-updater, cluster-render/mgu-render, SOME/IP GPS-мост, HSFZ-диагностика ECU, правила read-only и публикации только через istt1899/x3. Использовать для задач про MGU, iDrive 7, «Стрелку», RideTube, Waze on Cluster, Bimmer Code и диагностику блоков.
+description: Разработка, аудит и публикация приложений для BMW MGU (iDrive 7, G01 и совместимые): паспорт платформы, mgu-deploy/mgu-updater, анатомия RHMI/OAP-приложения, cluster-render/mgu-render, SOME/IP GPS-мост, HSFZ-диагностика ECU, правила read-only и публикации только через istt1899/x3. Использовать для задач про MGU, iDrive 7, «Стрелку», RideTube, Waze on Cluster, Bimmer Code и диагностику блоков.
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # MGU Development Skill — BMW X3 (G01) / iDrive 7 (MGU)
@@ -98,7 +98,35 @@ metadata:
 - **marku_x3_coding 0.2.0 («Bimmer Code для MGU Store»)**: каталог 10 функций + read-only обнаружение ECU; **запись кодировок НЕ реализована**. Диагностику запускать только на стоянке.
 - marku_kaluga_cameras 0.8.0 (HMI-апп Стрелки), marku_rutube 0.1.8, marku_vk_video 0.1.8 (отдельные UI к общей службе).
 
-## 10. Рецепты для агента-разработчика
+## 10. Анатомия HMI-приложения (RHMI/OAP) — эталон marku_kaluga_cameras 0.8.0
+
+Собранное дерево приложения (`<id>@<ver>/`):
+- `manifest.json` — `proxies`: какие интерфейсы использует апп (OAPController, RemoteHmi(Application), EntryPoint(Manager), ResourceManager/ResourceBundle, StringBundle, `HMIContext`(HMI_CID, атрибут `currentDisplayLanguage`), `PrivateEntryPoint[${userId}]` — registerEntryPoint/unregisterEntryPoint/setSelected/setAvailability, `AppBookmarks`, `WakeUpOnDemand`, SatellitePositioning…) + `services`.
+- `permissions.json` — Joynr DAC: masterAccessTable с `${APPNAME}`, trust level HIGH, таблицы heartbeat/registration.
+- `rhmiData/application.json` — schemaVersion, uuid приложения, type "OnlineApp", name/vendor/version, `defaultLanguage` (en_GB), `uiDescriptions` по HMI (ID7: `application.xml` + `uiDescription.json`), stringBundleUuid/resourceBundleUuid, `variantGroups` (Common/texts, Common/resources).
+- `rhmiData/uiDescriptions/ID7/` — описания экранов; `config/base.json`; `package.json` + `npm-shrinkwrap.json` — зафиксированные зависимости.
+
+Код (mgu-app.json): `modules` — src-файлы аппа; `sdk` — файлы oap-sdk (`core/OnlineApp.js`, `logging`, `someip/someipBuilders`); `mguHmi: ["ID7"]`.
+- Точка входа — класс extends `OnlineApp`. События: `changeVisibility` (visible), `shutdown(reason)`, `error`.
+- RHMI-состояния: имена видов `ST_OnlineApps_*`; страницы маппятся на состояния (PAGE_STATES).
+- Фон: апп сам решает, жить ли невидимым — паттерн `active = _visible || bridge.shouldHold()`; на `shutdown` идемпотентно закрывать мосты/таймеры (единый `_shutdownPromise`).
+- Язык HMI: `HMIContext.currentDisplayLanguage` → `i18n.setHmiLanguage` (имена CommonTypes.Language, напр. ARABISCH). Локали: `locales/<code>.json` → `tools/gen_locales.js` → `src/locales.js`; английский текст = ключ и fallback; данные (числа, причины, адреса) не переводятся; rhmiTexts-маппинг вида `ar_AE`. Ориентир эталона: 30+ локалей.
+
+Карточки на приборке/HUD (контракт card-layout, апп+демон):
+- Координаты — **тысячные доли доступного хода renderer (0–1000), не пиксели ГУ**; renderer сам считает canvas (подтверждено 800×480) и positionRange.
+- Поля профиля: `x`, `y` (int 0–1000), `scalePct` (75–150, шаг 5), `brightnessPct`/`opacityPct` (10–100); цели `hud` и `map` раздельно.
+- Перемещение — только при включённом тесте показа (`display-test`/`calibration-test`), иначе PREVIEW_REQUIRED; завершать `display-test-stop`; настройки сохранять атомарно (при сбое хранилища — `settingsSaved=false` в статусе).
+- Иконка приложения для Store — в каталоге: поля `icon` (URL PNG) + `iconSha256`; в mgu-app.json иконки нет.
+
+## 11. Не доказано — не выдумывать в приложениях
+
+- Звуковой канал BMW playback: подтверждённого API нет; звук «Стрелки» не реализован (F-01).
+- Холодный автозапуск HMI-аппа после reboot: мосты (GPS и др.) живут в аппе — без его запуска данных нет (F-06).
+- Название улицы: навигационный SOME/IP-мост подключён, но данных не даёт (F-08).
+- Запись кодировок (CAFD/NCD): пути нет; Bimmer Code 0.2.0 read-only.
+- Визуальные дизайн-токены HMI (цвета/шрифты/сетки BMW): аудитом не покрыты — брать из uiDescription эталона, не из предположений.
+
+## 12. Рецепты для агента-разработчика
 
 **Новое приложение/сервис:**
 1. Пакет: `/var/opt`-layout, component.json с sha256 всех файлов, systemd units (multi-user/sockets target), recmgr-имя, uid из пула, internet:true только если реально нужен.
