@@ -8,11 +8,12 @@
 | [spec](skills/spec/SKILL.md) | Проверяемое ТЗ, вопросы только по существенным пробелам, связи REQ → AC → проверка |
 | [spec-driven-development](skills/spec-driven-development/SKILL.md) | Общий маршрут от ТЗ до реализации и сверки требований; использует spec как единый стандарт |
 | [create-technopack-presentations](skills/create-technopack-presentations/SKILL.md) | Автономные HTML-презентации в документальном стандарте; полный пакет с образцами, проверками и [инструкцией установки](skills/create-technopack-presentations/INSTALL.md) |
+| [mgu-development](skills/mgu-development/SKILL.md) | Разработка, аудит и публикация приложений для BMW MGU (iDrive 7): паспорт платформы, рендереры, SOME/IP GPS-мост, HSFZ-диагностика ECU, правила read-only и публикации |
 
 Установка через Skills CLI:
 
 ```sh
-npx skills add istt1899/agent-skills --skill cloud-council spec spec-driven-development create-technopack-presentations
+npx skills add istt1899/agent-skills --skill cloud-council spec spec-driven-development create-technopack-presentations mgu-development
 ```
 
 Можно установить только совет или только spec, выбрав соответствующий аргумент
